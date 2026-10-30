@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swe-horizon-bench"
+version = "0.1.0"
+description = "AST-HorizonGraph localization, MS-SFT trajectory selection, and SWE-HorizonBench-OOD"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+authors = [{ name = "SWE-HorizonBench contributors" }]
+keywords = ["swe-bench", "localization", "ast", "coding-agents"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+swe-horizon-bench = "swe_horizon_bench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

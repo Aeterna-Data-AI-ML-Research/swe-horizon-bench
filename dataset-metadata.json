@@ -1,0 +1,5 @@
+{
+  "title": "SWE-HorizonBench: AST Horizon Graph & Multi-Hunk SWE Benchmark",
+  "id": "moranzavdi/swe-horizon-bench",
+  "licenses": [{"name": "Apache-2.0"}]
+}

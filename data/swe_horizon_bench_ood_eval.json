@@ -1,0 +1,1326 @@
+{
+  "ticket": "P6.71-create-standalone-swe-horizon-bench-open-source-repo-and-add-sec63",
+  "written_utc": "2026-10-30T17:05:58Z",
+  "CLOUD_APPROVAL": "NO",
+  "package_root": "/Volumes/pics/kaggle/swe-horizon-bench",
+  "pics_volume": "/Volumes/pics/kaggle/swe-horizon-bench",
+  "n_tasks": 60,
+  "libs": [
+    "anyio",
+    "click",
+    "httpcore",
+    "packaging",
+    "pluggy",
+    "starlette",
+    "typer",
+    "urllib3"
+  ],
+  "strata": {
+    "S1_le150": 8,
+    "S1_gt150": 10,
+    "S2_le150": 11,
+    "S2_gt150": 11,
+    "S3": 20
+  },
+  "competition_overlap_ids": [],
+  "holdout_leaks": [],
+  "ast_eval": {
+    "n_tasks_evaluated": 60,
+    "S1": {
+      "ast_recall@1": {
+        "n": 18,
+        "mean": 0.8888888888888888
+      },
+      "ast_recall@2": {
+        "n": 18,
+        "mean": 0.8888888888888888
+      },
+      "ast_recall@3": {
+        "n": 18,
+        "mean": 0.8888888888888888
+      },
+      "b1_recall@1": {
+        "n": 18,
+        "mean": 0.4444444444444444
+      },
+      "b1_recall@2": {
+        "n": 18,
+        "mean": 0.4444444444444444
+      },
+      "b1_recall@3": {
+        "n": 18,
+        "mean": 0.4444444444444444
+      },
+      "seq_recall@1": {
+        "n": 18,
+        "mean": 0.4444444444444444
+      },
+      "seq_recall@2": {
+        "n": 18,
+        "mean": 1.0
+      },
+      "seq_recall@3": {
+        "n": 18,
+        "mean": 1.0
+      }
+    },
+    "S1_le150": {
+      "ast_recall@1": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "ast_recall@2": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "ast_recall@3": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "b1_recall@1": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "b1_recall@2": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "b1_recall@3": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "seq_recall@1": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "seq_recall@2": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "seq_recall@3": {
+        "n": 8,
+        "mean": 1.0
+      }
+    },
+    "S1_gt150": {
+      "ast_recall@1": {
+        "n": 10,
+        "mean": 0.8
+      },
+      "ast_recall@2": {
+        "n": 10,
+        "mean": 0.8
+      },
+      "ast_recall@3": {
+        "n": 10,
+        "mean": 0.8
+      },
+      "b1_recall@1": {
+        "n": 10,
+        "mean": 0.0
+      },
+      "b1_recall@2": {
+        "n": 10,
+        "mean": 0.0
+      },
+      "b1_recall@3": {
+        "n": 10,
+        "mean": 0.0
+      },
+      "seq_recall@1": {
+        "n": 10,
+        "mean": 0.0
+      },
+      "seq_recall@2": {
+        "n": 10,
+        "mean": 1.0
+      },
+      "seq_recall@3": {
+        "n": 10,
+        "mean": 1.0
+      }
+    },
+    "S2": {
+      "ast_recall@1": {
+        "n": 22,
+        "mean": 0.75
+      },
+      "ast_recall@2": {
+        "n": 22,
+        "mean": 0.9090909090909091
+      },
+      "ast_recall@3": {
+        "n": 22,
+        "mean": 0.9318181818181818
+      },
+      "b1_recall@1": {
+        "n": 22,
+        "mean": 0.75
+      },
+      "b1_recall@2": {
+        "n": 22,
+        "mean": 0.75
+      },
+      "b1_recall@3": {
+        "n": 22,
+        "mean": 0.75
+      },
+      "seq_recall@1": {
+        "n": 22,
+        "mean": 0.75
+      },
+      "seq_recall@2": {
+        "n": 22,
+        "mean": 0.8181818181818182
+      },
+      "seq_recall@3": {
+        "n": 22,
+        "mean": 0.8636363636363636
+      }
+    },
+    "S2_deltaL_gt150": {
+      "ast_recall@1": {
+        "n": 11,
+        "mean": 0.5
+      },
+      "ast_recall@2": {
+        "n": 11,
+        "mean": 0.8181818181818182
+      },
+      "ast_recall@3": {
+        "n": 11,
+        "mean": 0.8636363636363636
+      },
+      "b1_recall@1": {
+        "n": 11,
+        "mean": 0.5
+      },
+      "b1_recall@2": {
+        "n": 11,
+        "mean": 0.5
+      },
+      "b1_recall@3": {
+        "n": 11,
+        "mean": 0.5
+      },
+      "seq_recall@1": {
+        "n": 11,
+        "mean": 0.5
+      },
+      "seq_recall@2": {
+        "n": 11,
+        "mean": 0.6363636363636364
+      },
+      "seq_recall@3": {
+        "n": 11,
+        "mean": 0.7272727272727273
+      }
+    },
+    "S3": {
+      "ast_recall@1": {
+        "n": 20,
+        "mean": 0.45
+      },
+      "ast_recall@2": {
+        "n": 20,
+        "mean": 0.775
+      },
+      "ast_recall@3": {
+        "n": 20,
+        "mean": 0.825
+      },
+      "b1_recall@1": {
+        "n": 20,
+        "mean": 0.45
+      },
+      "b1_recall@2": {
+        "n": 20,
+        "mean": 0.95
+      },
+      "b1_recall@3": {
+        "n": 20,
+        "mean": 0.95
+      },
+      "seq_recall@1": {
+        "n": 20,
+        "mean": 0.45
+      },
+      "seq_recall@2": {
+        "n": 20,
+        "mean": 0.45
+      },
+      "seq_recall@3": {
+        "n": 20,
+        "mean": 0.5
+      }
+    },
+    "rows": [
+      {
+        "task_id": "ood_click_s1__make_text_stream_22",
+        "repo": "click",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 22,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_typer_s1__make_text_stream_23",
+        "repo": "typer",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 23,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_typer_s1_is_ascii_encoding_38",
+        "repo": "typer",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 38,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_urllib3_s1_add_stderr_logger_74",
+        "repo": "urllib3",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 74,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_urllib3_s1_disable_warnings_107",
+        "repo": "urllib3",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 107,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_packaging_s1_ELFFile___init___45",
+        "repo": "packaging",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 45,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_packaging_s1_ELFFile__read_90",
+        "repo": "packaging",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 90,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_starlette_s1_UnauthenticatedUser_display_name_152",
+        "repo": "starlette",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 152,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_starlette_s1_UnauthenticatedUser_identity_156",
+        "repo": "starlette",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 156,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_click_s1__is_binary_reader_154",
+        "repo": "click",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 154,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_click_s1__is_binary_writer_163",
+        "repo": "click",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 163,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_typer_s1__find_binary_writer_152",
+        "repo": "typer",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 152,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_typer_s1__stream_is_misconfigured_170",
+        "repo": "typer",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 170,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_urllib3_s1_RecentlyUsedContainer_keys_151",
+        "repo": "urllib3",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 0.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 0.0,
+        "b1_recall@2": 0.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 0.0,
+        "b1_recall@3": 0.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 151,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_urllib3_s1_HTTPHeaderDictItemView___init___187",
+        "repo": "urllib3",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 0.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 0.0,
+        "b1_recall@2": 0.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 0.0,
+        "b1_recall@3": 0.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 187,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_packaging_s1__glibc_version_string_151",
+        "repo": "packaging",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 151,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_packaging_s1__parse_glibc_version_156",
+        "repo": "packaging",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 156,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_starlette_s2__lookup_exception_handler_wrap_app_handling_exceptions_16",
+        "repo": "starlette",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 23,
+        "delta_L": 7
+      },
+      {
+        "task_id": "ood_starlette_s2_ParsedHost_authority_get_route_path_42",
+        "repo": "starlette",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 137,
+        "delta_L": 95
+      },
+      {
+        "task_id": "ood_click_s2__make_text_stream_is_ascii_encoding_22",
+        "repo": "click",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 43,
+        "delta_L": 21
+      },
+      {
+        "task_id": "ood_click_s2_ProgressBar___init___ProgressBar___enter___44",
+        "repo": "click",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 115,
+        "delta_L": 71
+      },
+      {
+        "task_id": "ood_typer_s2__make_text_stream_is_ascii_encoding_23",
+        "repo": "typer",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 38,
+        "delta_L": 15
+      },
+      {
+        "task_id": "ood_typer_s2_ProgressBar___init___ProgressBar___enter___37",
+        "repo": "typer",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 108,
+        "delta_L": 71
+      },
+      {
+        "task_id": "ood_urllib3_s2_add_stderr_logger_request_74",
+        "repo": "urllib3",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 117,
+        "delta_L": 43
+      },
+      {
+        "task_id": "ood_urllib3_s2_add_stderr_logger_disable_warnings_74",
+        "repo": "urllib3",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 107,
+        "delta_L": 33
+      },
+      {
+        "task_id": "ood_packaging_s2_ELFFile___init___ELFFile_interpreter_45",
+        "repo": "packaging",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 94,
+        "delta_L": 49
+      },
+      {
+        "task_id": "ood_packaging_s2_ELFFile___init___ELFFile__read_45",
+        "repo": "packaging",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 90,
+        "delta_L": 45
+      },
+      {
+        "task_id": "ood_starlette_s2_URL___init___State___len___28",
+        "repo": "starlette",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 0.5,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 716,
+        "delta_L": 688
+      },
+      {
+        "task_id": "ood_starlette_s2__user_safe_decode_MultiPartParser_parse_61",
+        "repo": "starlette",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 235,
+        "delta_L": 174
+      },
+      {
+        "task_id": "ood_click_s2__make_text_stream__make_cached_stream_func_22",
+        "repo": "click",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 547,
+        "delta_L": 525
+      },
+      {
+        "task_id": "ood_click_s2_ProgressBar___init____translate_ch_to_exc_44",
+        "repo": "click",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 869,
+        "delta_L": 825
+      },
+      {
+        "task_id": "ood_typer_s2__make_text_stream__make_cached_stream_func_23",
+        "repo": "typer",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 529,
+        "delta_L": 506
+      },
+      {
+        "task_id": "ood_typer_s2_ProgressBar___init____translate_ch_to_exc_37",
+        "repo": "typer",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 417,
+        "delta_L": 380
+      },
+      {
+        "task_id": "ood_urllib3_s2_ensure_can_construct_http_header_dict_HTTPHeaderDict___ror___43",
+        "repo": "urllib3",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 482,
+        "delta_L": 439
+      },
+      {
+        "task_id": "ood_urllib3_s2__normalize_header_value__url_from_connection_85",
+        "repo": "urllib3",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 0.5,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 1197,
+        "delta_L": 1112
+      },
+      {
+        "task_id": "ood_packaging_s2__parse_elf_platform_tags_34",
+        "repo": "packaging",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 235,
+        "delta_L": 201
+      },
+      {
+        "task_id": "ood_packaging_s2_Node___init____parse_marker_op_19",
+        "repo": "packaging",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 401,
+        "delta_L": 382
+      },
+      {
+        "task_id": "ood_starlette_s3__exception_handler__utils_16_46",
+        "repo": "starlette",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 46,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_starlette_s3__exception_handler_applications_16_63",
+        "repo": "starlette",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 63,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_starlette_s3__exception_handler_authentication_16_25",
+        "repo": "starlette",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 25,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_click_s3___init____compat_76_43",
+        "repo": "click",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 76,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_click_s3___init____termui_impl_76_115",
+        "repo": "click",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 115,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_click_s3___init____textwrap_76_48",
+        "repo": "click",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 76,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_typer_s3__compat__termui_impl_23_108",
+        "repo": "typer",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 108,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_typer_s3__compat__textwrap_23_23",
+        "repo": "typer",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 23,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_typer_s3__compat__winconsole_23_126",
+        "repo": "typer",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.0,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 0.5,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 126,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_urllib3_s3___init____collections_74_82",
+        "repo": "urllib3",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 82,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_urllib3_s3___init____request_methods_74_54",
+        "repo": "urllib3",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 74,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_urllib3_s3___init___connection_74_91",
+        "repo": "urllib3",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 0.5,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 91,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_packaging_s3__elffile__manylinux_45_42",
+        "repo": "packaging",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 0.5,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 45,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_packaging_s3__elffile__musllinux_45_37",
+        "repo": "packaging",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 45,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_packaging_s3__elffile__parser_45_22",
+        "repo": "packaging",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 45,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_pluggy_s3___init____caller_32_67",
+        "repo": "pluggy",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 0.5,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 67,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_pluggy_s3___init____compat_32_28",
+        "repo": "pluggy",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 32,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_pluggy_s3___init____config_32_48",
+        "repo": "pluggy",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 0.5,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 48,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_anyio_s3__asyncio__trio_311_150",
+        "repo": "anyio",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 0.0,
+        "ast_recall@3": 0.5,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 311,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_anyio_s3__asyncio__asyncio_selector_thread_311_44",
+        "repo": "anyio",
+        "topology": "S3_multi_file",
+        "ast_recall@1": 0.0,
+        "b1_recall@1": 0.0,
+        "seq_recall@1": 0.0,
+        "ast_recall@2": 0.0,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 0.0,
+        "ast_recall@3": 0.0,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 0.5,
+        "max_hunk_line": 311,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_httpcore_s1_request_10",
+        "repo": "httpcore",
+        "topology": "S1_single_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 10,
+        "delta_L": 0
+      },
+      {
+        "task_id": "ood_httpcore_s2_request_stream",
+        "repo": "httpcore",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 1.0,
+        "b1_recall@1": 1.0,
+        "seq_recall@1": 1.0,
+        "ast_recall@2": 1.0,
+        "b1_recall@2": 1.0,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 1.0,
+        "b1_recall@3": 1.0,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 51,
+        "delta_L": 41
+      },
+      {
+        "task_id": "ood_httpcore_s2_exponential_backoff_AsyncHTTPConnection.__aexit__",
+        "repo": "httpcore",
+        "topology": "S2_single_file_multi_hunk",
+        "ast_recall@1": 0.5,
+        "b1_recall@1": 0.5,
+        "seq_recall@1": 0.5,
+        "ast_recall@2": 0.5,
+        "b1_recall@2": 0.5,
+        "seq_recall@2": 1.0,
+        "ast_recall@3": 0.5,
+        "b1_recall@3": 0.5,
+        "seq_recall@3": 1.0,
+        "max_hunk_line": 216,
+        "delta_L": 191
+      }
+    ]
+  },
+  "two_sided_verify": {
+    "n": 11,
+    "n_usable_two_sided": 11,
+    "rows": [
+      {
+        "task_id": "ood_click_s1__make_text_stream_22",
+        "repo": "click",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_typer_s1__make_text_stream_23",
+        "repo": "typer",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_typer_s1_is_ascii_encoding_38",
+        "repo": "typer",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_urllib3_s1_add_stderr_logger_74",
+        "repo": "urllib3",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_urllib3_s1_disable_warnings_107",
+        "repo": "urllib3",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_packaging_s1_ELFFile___init___45",
+        "repo": "packaging",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_packaging_s1_ELFFile__read_90",
+        "repo": "packaging",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_starlette_s1_UnauthenticatedUser_display_name_152",
+        "repo": "starlette",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_pluggy_s3___init____caller_32_67",
+        "repo": "pluggy",
+        "topology": "S3_multi_file",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_anyio_s3__asyncio__trio_311_150",
+        "repo": "anyio",
+        "topology": "S3_multi_file",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_httpcore_s1_request_10",
+        "repo": "httpcore",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      }
+    ]
+  },
+  "g4_pass": true
+}
