@@ -6,7 +6,7 @@
 > *How Broken Tests, LoRA Serving Overhead, and Context Limits Bottleneck 4-Bit Coding Agents*
 
 **Authors:** Moran Zavdi (team)  
-**Site:** [aeterna-data-ai-ml-research.github.io/swe-horizon-bench](https://aeterna-data-ai-ml-research.github.io/swe-horizon-bench/) (CRT / [ascii.rest](https://ascii.rest/) docs)  
+**Site:** [aeterna-data-ai-ml-research.github.io/swe-horizon-bench](https://aeterna-data-ai-ml-research.github.io/swe-horizon-bench/)  
 **Resources:** [GitHub](https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench) · Kaggle dataset [`moranzavdi/gemma4-soundness-and-punica-bench`](https://www.kaggle.com/datasets/moranzavdi/gemma4-soundness-and-punica-bench) · notebook [`moranzavdi/from-local-validation-to-live-evaluation`](https://www.kaggle.com/code/moranzavdi/from-local-validation-to-live-evaluation)
 
 This repository releases the reusable diagnostics from that study as a **zero-runtime-dependency**, `pip`-installable Python package: two-sided harness soundness, **AST-HorizonGraph** localization under a 150-line read horizon, **MS-SFT** serve-cost-aware trajectory selection, the **SWE-HorizonBench-OOD** probe (60 tasks / 8 external libraries), and a native `@kbench.task` verification suite.

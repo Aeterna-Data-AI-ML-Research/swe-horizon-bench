@@ -2,37 +2,26 @@
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  const clock = document.querySelector("[data-clock]");
-  if (clock) {
-    const tick = () => {
-      const d = new Date();
-      clock.textContent = d.toISOString().replace("T", " ").slice(0, 19) + "Z";
-    };
-    tick();
-    setInterval(tick, 1000);
-  }
-
   document.querySelectorAll("[data-copy]").forEach((btn) => {
     btn.addEventListener("click", async () => {
       const id = btn.getAttribute("data-copy");
-      const block = id ? document.getElementById(id) : btn.closest(".code-block")?.querySelector("code");
+      const block = id ? document.getElementById(id) : null;
       const text = block?.textContent ?? "";
       try {
         await navigator.clipboard.writeText(text);
         btn.classList.add("copied");
-        btn.textContent = "copied";
+        btn.textContent = "Copied";
         setTimeout(() => {
           btn.classList.remove("copied");
-          btn.textContent = "copy";
+          btn.textContent = "Copy";
         }, 1400);
       } catch {
-        btn.textContent = "failed";
+        btn.textContent = "Failed";
       }
     });
   });
 
-  const tabs = document.querySelectorAll("[data-tabs]");
-  tabs.forEach((root) => {
+  document.querySelectorAll("[data-tabs]").forEach((root) => {
     const buttons = root.querySelectorAll(".tab");
     const panels = root.querySelectorAll(".tab-panel");
     buttons.forEach((btn) => {
