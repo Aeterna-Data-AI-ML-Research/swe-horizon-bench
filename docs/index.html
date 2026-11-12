@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SWE-HorizonBench // AST localization · MS-SFT · OOD probe</title>
+    <meta
+      name="description"
+      content="Zero-dependency toolkit for coding-agent research: AST-HorizonGraph, two-sided soundness, MS-SFT trajectory selection, and SWE-HorizonBench-OOD."
+    />
+    <meta name="theme-color" content="#070b08" />
+    <meta property="og:title" content="SWE-HorizonBench" />
+    <meta
+      property="og:description"
+      content="Retro docs for the open toolkit behind From Local Validation to Live Evaluation."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="https://ascii.rest/ascii.js"></script>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="status" role="banner">
+        <div>
+          <span class="pulse" aria-hidden="true"></span>
+          <strong>SYS.ONLINE</strong>
+          · swe-horizon-bench v0.1.1
+          · <span data-clock>—</span>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="#what">what</a>
+          <a href="#pipeline">pipeline</a>
+          <a href="#install">install</a>
+          <a href="#use">use</a>
+          <a href="#ood">ood</a>
+          <a href="#cite">cite</a>
+          <a href="https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench">github</a>
+        </nav>
+      </header>
+
+      <section class="hero" aria-label="Hero">
+        <div class="hero-copy">
+          <div class="eyebrow">open toolkit · apache-2.0 · ascii.rest powered</div>
+          <div class="banner-wrap" aria-label="SWE-HorizonBench banner">
+            <ascii-banner
+              text="HORIZON"
+              color="#39ff88,#ffb84d"
+              shadow="ascii"
+              font="block"
+              effect="glint"
+            ></ascii-banner>
+          </div>
+          <h1>
+            <span class="accent">SWE-HorizonBench</span>
+            — localize, gate, and curate under a 150-line horizon
+          </h1>
+          <p class="lede">
+            A zero-runtime-dependency Python toolkit for coding-agent research.
+            Rank ≤150-line read windows with <strong>AST-HorizonGraph</strong>,
+            enforce <strong>two-sided soundness</strong>, select serve-cost-aware
+            trajectories with <strong>MS-SFT</strong>, and probe construct validity
+            on <strong>SWE-HorizonBench-OOD</strong> (60 tasks · 8 libraries · 0% competition overlap).
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="#install">▸ install &amp; run</a>
+            <a class="btn ghost" href="#use">▸ usage recipes</a>
+            <a
+              class="btn ghost"
+              href="https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench"
+              >▸ source</a
+            >
+          </div>
+          <ascii-art
+            piece="typewriter"
+            options='{"prefix":"> mission: ","phrases":["fix the harness.","bridge the 150-line gap.","cut LoRA wall under 12h.","ship reproducible diagnostics."]}'
+            label="Mission typewriter"
+            style="color: #39ff88; font-size: 13px; margin-top: 0.5rem"
+          ></ascii-art>
+        </div>
+
+        <aside class="hero-art" aria-label="Animated matrix rain">
+          <ascii-art piece="matrix-rain" label="Matrix rain"></ascii-art>
+        </aside>
+      </section>
+
+      <section id="what">
+        <div class="section-head">
+          <span class="tag">01</span>
+          <h2>What the framework does</h2>
+          <p>four coupled diagnostics · one pip package</p>
+        </div>
+
+        <div class="stats" aria-label="Headline metrics from the paper">
+          <div class="stat">
+            <span class="n">111/129</span>
+            <span class="l">two-sided usable tasks</span>
+          </div>
+          <div class="stat">
+            <span class="n">84%→16%</span>
+            <span class="l">localize → resolve funnel</span>
+          </div>
+          <div class="stat">
+            <span class="n">−45%</span>
+            <span class="l">LoRA episode tok/s (N=5)</span>
+          </div>
+          <div class="stat">
+            <span class="n">11.86h</span>
+            <span class="l">MS-SFT projected / 120</span>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 1rem">
+          <article class="panel">
+            <h3>AST-HorizonGraph</h3>
+            <p>
+              Parse a Python repo into import / call / sibling / attribute edges,
+              weight issue tokens with sub-token IDF, and return K disjoint
+              ≤150-line windows — the exact read budget many agent harnesses enforce.
+            </p>
+            <div class="art-slot">
+              <ascii-art piece="file-tree" label="File tree"></ascii-art>
+            </div>
+          </article>
+          <article class="panel">
+            <h3>Two-sided soundness</h3>
+            <p>
+              A task is usable only if empty-patch tests <em>fail</em> and the
+              human oracle patch makes them <em>pass</em>. Also classifies patch
+              topology S1 / S2 / S3 and the &gt;150-line companion-hunk flag.
+            </p>
+            <div class="art-slot">
+              <ascii-art piece="gauge" label="Soundness gauge"></ascii-art>
+            </div>
+          </article>
+          <article class="panel">
+            <h3>MS-SFT selector</h3>
+            <p>
+              Score every sound passing rollout by tokens, steps, excess hunks,
+              and scratch contamination. Keep one serve-cost-optimal winner per
+              task so LoRA fine-tuning stays inside a fixed wall-clock budget.
+            </p>
+            <div class="art-slot">
+              <ascii-art piece="progress-bar" label="Progress bar"></ascii-art>
+            </div>
+          </article>
+          <article class="panel">
+            <h3>OOD + @kbench.task</h3>
+            <p>
+              Ship a 60-task out-of-distribution probe across 8 external libraries,
+              plus a 3-task native Kaggle Benchmarks suite that runs offline via
+              a deterministic shim or live with <code>kaggle_benchmarks</code>.
+            </p>
+            <div class="art-slot">
+              <ascii-art piece="python" label="Python logo" style="width: 160px"></ascii-art>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="pipeline">
+        <div class="section-head">
+          <span class="tag">02</span>
+          <h2>How the pieces fit</h2>
+          <p>from broken tests to serve-aware curation</p>
+        </div>
+        <div class="pipeline" aria-label="Framework pipeline">
+          <div class="pipe">
+            <span class="step">STEP 0</span>
+            <strong>Gate</strong>
+            <span>two_sided_sound</span>
+          </div>
+          <div class="pipe">
+            <span class="step">STEP 1</span>
+            <strong>Localize</strong>
+            <span>ASTHorizonGraph</span>
+          </div>
+          <div class="pipe">
+            <span class="step">STEP 2</span>
+            <strong>Topology</strong>
+            <span>classify_topology</span>
+          </div>
+          <div class="pipe">
+            <span class="step">STEP 3</span>
+            <strong>Curate</strong>
+            <span>select_ms_sft</span>
+          </div>
+          <div class="pipe">
+            <span class="step">STEP 4</span>
+            <strong>Verify</strong>
+            <span>kbench-suite</span>
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top: 1rem">
+          <div class="panel">
+            <h3>Why a 150-line horizon?</h3>
+            <p>
+              Many coding-agent stacks truncate <code>read_file</code> at 150 lines
+              (or 10k chars). Agents often open the right file yet miss companion
+              edit sites deeper in the same module — Pass@1 collapses from single-hunk
+              to multi-hunk / multi-file topologies. HorizonGraph allocates multiple
+              windows under that hard budget.
+            </p>
+          </div>
+          <div class="panel">
+            <h3>Construct-validity warning</h3>
+            <p>
+              Synthetic OOD prompts that name Python symbols inflate lexical and graph
+              recall the same way seeded gold-file pools do. Use OOD as a fast CPU
+              sanity check — not as proof of end-to-end unseeded retrieval.
+            </p>
+            <div class="art-slot" style="margin-top: 0.75rem">
+              <ascii-art piece="boot-log" label="Boot log"></ascii-art>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="install">
+        <div class="section-head">
+          <span class="tag">03</span>
+          <h2>Install</h2>
+          <p>Python ≥ 3.10 · no heavy runtime deps</p>
+        </div>
+
+        <div class="code-block">
+          <div class="bar">
+            <span>shell · editable install</span>
+            <button class="copy-btn" type="button" data-copy="code-install">copy</button>
+          </div>
+          <pre><code id="code-install">git clone https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench.git
+cd swe-horizon-bench
+python3 -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
+pytest tests/ -q
+# 7 passed</code></pre>
+        </div>
+
+        <div class="code-block">
+          <div class="bar">
+            <span>shell · one-liner from GitHub</span>
+            <button class="copy-btn" type="button" data-copy="code-pip">copy</button>
+          </div>
+          <pre><code id="code-pip">pip install "git+https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench.git"</code></pre>
+        </div>
+      </section>
+
+      <section id="use" data-tabs>
+        <div class="section-head">
+          <span class="tag">04</span>
+          <h2>How to use it</h2>
+          <p>CLI + Python API · pick a recipe</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Usage recipes">
+          <button class="tab" type="button" data-tab="localize" aria-selected="true">localize</button>
+          <button class="tab" type="button" data-tab="sound" aria-selected="false">soundness</button>
+          <button class="tab" type="button" data-tab="mssft" aria-selected="false">ms-sft</button>
+          <button class="tab" type="button" data-tab="kbench" aria-selected="false">kbench</button>
+        </div>
+
+        <div class="tab-panel" data-panel="localize">
+          <div class="grid-2" style="margin-top: 0.75rem">
+            <div>
+              <p style="color: var(--muted); margin: 0 0 0.75rem">
+                Rank K coupling-scored read windows for an issue on <em>any</em> Python repository.
+              </p>
+              <div class="code-block">
+                <div class="bar">
+                  <span>cli · localize</span>
+                  <button class="copy-btn" type="button" data-copy="code-loc-cli">copy</button>
+                </div>
+                <pre><code id="code-loc-cli">python3 -m swe_horizon_bench.cli localize \
+  --repo /path/to/repo \
+  --query "timeout ignored when follow_redirects=False" \
+  --seed src/client.py \
+  -k 3</code></pre>
+              </div>
+            </div>
+            <div class="code-block">
+              <div class="bar">
+                <span>python · localize_windows</span>
+                <button class="copy-btn" type="button" data-copy="code-loc-py">copy</button>
+              </div>
+              <pre><code id="code-loc-py">from swe_horizon_bench import localize_windows
+
+wins = localize_windows(
+    "~/code/myrepo",
+    "pluggy hook wrapper order",
+    seed_file="src/pluggy/_hooks.py",
+    k=3,
+)
+for w in wins:
+    print(w["path"], w["start_line"], w["end_line"], w["score"])</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="sound" hidden>
+          <div class="code-block" style="margin-top: 0.75rem">
+            <div class="bar">
+              <span>python · soundness + topology</span>
+              <button class="copy-btn" type="button" data-copy="code-sound">copy</button>
+            </div>
+            <pre><code id="code-sound">from swe_horizon_bench import two_sided_sound, classify_topology
+
+gate = two_sided_sound(
+    empty_pass=False,   # tests must fail without a patch
+    oracle_pass=True,   # human fix must make tests pass
+    candidate_pass=True,
+)
+assert gate["usable"]
+
+topo = classify_topology(open("gold.patch").read())
+# topology: S1_single_hunk | S2_single_file_multi_hunk | S3_multi_file
+# any_file_delta_L_gt_150: True when companions sit past the 150-line horizon
+print(topo["topology"], topo["any_file_delta_L_gt_150"])</code></pre>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="mssft" hidden>
+          <div class="code-block" style="margin-top: 0.75rem">
+            <div class="bar">
+              <span>python · MS-SFT winner per task</span>
+              <button class="copy-btn" type="button" data-copy="code-ms">copy</button>
+            </div>
+            <pre><code id="code-ms">from swe_horizon_bench import j_ms, select_ms_sft
+
+# J_MS = I[sound] * exp(-α tok/Tmax - β steps/Nmax - γ hunks/gold - δ scratch)
+score = j_ms(
+    sound=True, tokens=3918, steps=24, hunks=2, gold_hunks=3, scratch=False,
+    alpha=1.5, beta=1.0, gamma=0.5, delta=2.0,
+)
+
+winners = select_ms_sft([
+    {"task_id": "t1", "sound": True, "tokens": 3918, "steps": 24,
+     "hunks": 2, "gold_hunks": 3, "scratch": False},
+    {"task_id": "t1", "sound": True, "tokens": 6200, "steps": 40,
+     "hunks": 5, "gold_hunks": 3, "scratch": True},
+])
+print(winners["t1"]["j_ms"], score)</code></pre>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="kbench" hidden>
+          <div class="grid-2" style="margin-top: 0.75rem">
+            <div class="code-block">
+              <div class="bar">
+                <span>cli · kbench-suite</span>
+                <button class="copy-btn" type="button" data-copy="code-kb-cli">copy</button>
+              </div>
+              <pre><code id="code-kb-cli">python3 -m swe_horizon_bench.cli kbench-suite \
+  --dataset data/swe_horizon_bench_ood_60.jsonl \
+  --out data/swe_horizon_bench_kbench_leaderboard.json
+
+python3 -m swe_horizon_bench.cli evaluate-ood \
+  --dataset data/swe_horizon_bench_ood_60.jsonl</code></pre>
+            </div>
+            <div class="code-block">
+              <div class="bar">
+                <span>python · run_kbench_suite</span>
+                <button class="copy-btn" type="button" data-copy="code-kb-py">copy</button>
+              </div>
+              <pre><code id="code-kb-py">from swe_horizon_bench import (
+    load_ood_dataframe,
+    run_kbench_suite,
+    TASK_NAMES,
+)
+
+df = load_ood_dataframe("data/swe_horizon_bench_ood_60.jsonl")
+board = run_kbench_suite(df=df)
+print(TASK_NAMES)
+print(board)</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ood">
+        <div class="section-head">
+          <span class="tag">05</span>
+          <h2>SWE-HorizonBench-OOD</h2>
+          <p>60 tasks · 8 libs · stratified horizons</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Libraries</td>
+                <td><code>starlette</code> <code>click</code> <code>typer</code> <code>urllib3</code> <code>packaging</code> <code>pluggy</code> <code>anyio</code> <code>httpcore</code></td>
+              </tr>
+              <tr>
+                <td>Competition overlap</td>
+                <td><strong>0%</strong> vs <code>{fastapi, rich, requests, httpx}</code></td>
+              </tr>
+              <tr>
+                <td>Strata (diff-classified)</td>
+                <td>S1 <strong>18</strong> (8≤150 / 10&gt;150) · S2 <strong>22</strong> (11/11) · S3 <strong>20</strong></td>
+              </tr>
+              <tr>
+                <td>Marker protocol</td>
+                <td><code># HORIZON_BENCH_FIX</code> on real <code>def</code> lines · grade placement</td>
+              </tr>
+              <tr>
+                <td>Two-sided sample</td>
+                <td><strong>11 / 11</strong> usable</td>
+              </tr>
+              <tr>
+                <td>@kbench.task suite</td>
+                <td><code>b1_vs_ast</code> · <code>w2_inline_repro</code> · <code>punica_budget</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-3" style="margin-top: 1rem">
+          <div class="panel">
+            <h3>terminal</h3>
+            <div class="art-slot">
+              <ascii-art piece="terminal" label="Terminal piece"></ascii-art>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>cpu meters</h3>
+            <div class="art-slot">
+              <ascii-art piece="cpu-meters" label="CPU meters"></ascii-art>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>donut (for the geeks)</h3>
+            <div class="art-slot">
+              <ascii-art piece="donut" label="Spinning donut" style="font-size: 9px"></ascii-art>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cite">
+        <div class="section-head">
+          <span class="tag">06</span>
+          <h2>Paper &amp; citation</h2>
+          <p>companion to From Local Validation to Live Evaluation</p>
+        </div>
+        <div class="panel">
+          <h3>From Local Validation to Live Evaluation</h3>
+          <p>
+            How Broken Tests, LoRA Serving Overhead, and Context Limits Bottleneck
+            4-Bit Coding Agents — Moran Zavdi (team). Dataset
+            <a href="https://www.kaggle.com/datasets/moranzavdi/gemma4-soundness-and-punica-bench"
+              >moranzavdi/gemma4-soundness-and-punica-bench</a
+            >.
+          </p>
+          <div class="code-block" style="margin-top: 0.85rem">
+            <div class="bar">
+              <span>bibtex</span>
+              <button class="copy-btn" type="button" data-copy="code-bib">copy</button>
+            </div>
+            <pre><code id="code-bib">@software{swehorizonbench2026,
+  title   = {{SWE-HorizonBench}: AST-HorizonGraph, MS-SFT, and OOD diagnostics},
+  author  = {Zavdi, Moran},
+  year    = {2026},
+  url     = {https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench},
+  version = {0.1.1},
+  license = {Apache-2.0}
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>
+          © <span data-year>2026</span> SWE-HorizonBench contributors · Apache-2.0
+          · not an official Google product
+        </div>
+        <div class="credit">
+          CRT chrome · animated pieces by
+          <a href="https://ascii.rest/" rel="noopener">ascii.rest</a>
+          (MIT) ·
+          <a href="https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench">github</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./site.js" defer></script>
+  </body>
+</html>
