@@ -1,0 +1,1725 @@
+{
+  "ticket": "P6.40-oracle-patch-complexity-stratification-and-d17-synthesis",
+  "written_utc": "2026-10-30T08:53:44Z",
+  "g4_holdout_excluded": true,
+  "holdout_leaks": [],
+  "read_file_cap_lines": 150,
+  "census_non_holdout_usable": {
+    "n_tasks": 85,
+    "topology_counts": {
+      "S1_single_file_single_hunk": 39,
+      "S3_multi_file": 28,
+      "S2_single_file_multi_hunk": 18
+    },
+    "S2_n": 18,
+    "S2_n_delta_L_gt_150": 9,
+    "S2_fraction_delta_L_gt_150": 0.5,
+    "S2_median_delta_L": 168.0,
+    "S2_p90_delta_L": 675
+  },
+  "agent_funnel_by_topology_hist_smoke_dev": {
+    "S1_single_file_single_hunk": {
+      "label": "S1_single_file_single_hunk",
+      "n": 18,
+      "stage1_read_pct": 77.8,
+      "stage2_edit_pct": 50.0,
+      "stage3_pytest_pct": 16.7,
+      "stage4_pass_pct": 27.8,
+      "n_delta_L_gt_150": 0,
+      "median_delta_L": 0.0
+    },
+    "S2_single_file_multi_hunk": {
+      "label": "S2_single_file_multi_hunk",
+      "n": 9,
+      "stage1_read_pct": 88.9,
+      "stage2_edit_pct": 33.3,
+      "stage3_pytest_pct": 44.4,
+      "stage4_pass_pct": 11.1,
+      "n_delta_L_gt_150": 3,
+      "median_delta_L": 78
+    },
+    "S3_multi_file": {
+      "label": "S3_multi_file",
+      "n": 18,
+      "stage1_read_pct": 83.3,
+      "stage2_edit_pct": 33.3,
+      "stage3_pytest_pct": 5.6,
+      "stage4_pass_pct": 5.6,
+      "n_delta_L_gt_150": 15,
+      "median_delta_L": 440.0
+    }
+  },
+  "agent_funnel_S2_split_by_delta_L": {
+    "gt_150": {
+      "label": "S2_delta_L_gt_150",
+      "n": 3,
+      "stage1_read_pct": 66.7,
+      "stage2_edit_pct": 0.0,
+      "stage3_pytest_pct": 33.3,
+      "stage4_pass_pct": 0.0,
+      "n_delta_L_gt_150": 3,
+      "median_delta_L": 418
+    },
+    "le_150": {
+      "label": "S2_delta_L_le_150",
+      "n": 6,
+      "stage1_read_pct": 100.0,
+      "stage2_edit_pct": 50.0,
+      "stage3_pytest_pct": 50.0,
+      "stage4_pass_pct": 16.7,
+      "n_delta_L_gt_150": 0,
+      "median_delta_L": 22.5
+    }
+  },
+  "agent_funnel_overall": {
+    "label": "hist_smoke_dev_all",
+    "n": 45,
+    "stage1_read_pct": 82.2,
+    "stage2_edit_pct": 40.0,
+    "stage3_pytest_pct": 17.8,
+    "stage4_pass_pct": 15.6,
+    "n_delta_L_gt_150": 18,
+    "median_delta_L": 22
+  },
+  "arm_A_rows": [
+    {
+      "task_id": "rich_3882",
+      "src": "p624b_arm_A",
+      "topology": "S1_single_file_single_hunk",
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": true,
+      "stage4_resolved": true,
+      "edit_fail_kinds": {},
+      "pytest_fail_kinds": {
+        "exit0_or_ok": 1
+      },
+      "n_pytest": 1
+    },
+    {
+      "task_id": "rich_3905",
+      "src": "p624b_arm_A",
+      "topology": "S1_single_file_single_hunk",
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": true,
+      "edit_fail_kinds": {},
+      "pytest_fail_kinds": {},
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3930",
+      "src": "p624b_arm_A",
+      "topology": "S3_multi_file",
+      "max_delta_L": 306,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "edit_fail_kinds": {},
+      "pytest_fail_kinds": {},
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14616",
+      "src": "p624b_arm_A",
+      "topology": "S2_single_file_multi_hunk",
+      "max_delta_L": 675,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "edit_fail_kinds": {
+        "not_found": 1,
+        "other_edit_error": 1
+      },
+      "pytest_fail_kinds": {},
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14609",
+      "src": "p624b_arm_A",
+      "topology": "S3_multi_file",
+      "max_delta_L": 1939,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "edit_fail_kinds": {
+        "not_found": 1
+      },
+      "pytest_fail_kinds": {},
+      "n_pytest": 0
+    }
+  ],
+  "hypothesis": {
+    "statement": "Agent resolves high fraction of S1, collapses on S2 especially when ΔL>150 (read_file cap), worse on S3",
+    "s1_pass_pct": 27.8,
+    "s2_pass_pct": 11.1,
+    "s3_pass_pct": 5.6,
+    "s2_gt150_pass_pct": 0.0,
+    "s2_le150_pass_pct": 16.7,
+    "s2_gt150_edit_pct": 0.0,
+    "s2_le150_edit_pct": 50.0,
+    "link_read_cap_to_C1": true,
+    "census_s2_fraction_delta_L_gt_150": 0.5
+  },
+  "allow_multiple_and_edit_failures": {
+    "exposed_in_llm_tool_schema": true,
+    "evidence": "swegemma.tools.workspace.make_edit_file.edit_file_tool(filepath, old_string, new_string, allow_multiple: bool = False)",
+    "default": false,
+    "edit_fail_counts_on_agent_traces": {
+      "not_found": 1,
+      "other_edit_error": 2
+    },
+    "n_agent_traces_scanned": 45,
+    "note": "LLM tool schema exposes allow_multiple (default false); hist N=45 edit fails: not_found=1 other=2 ambiguous/multiple_matches=0. Arm A N=5 adds 0 edit fails in funnel rows.",
+    "ambiguous_or_multiple_matches": 0
+  },
+  "post_edit_pytest_on_11_gold_edit_fails": {
+    "n": 11,
+    "kind_totals": {
+      "assertion_fail": 6
+    },
+    "n_with_any_post_edit_pytest": 1,
+    "rows": [
+      {
+        "task_id": "fastapi_14455",
+        "topology": "S2_single_file_multi_hunk",
+        "max_delta_L": 10,
+        "any_file_delta_L_gt_150": false,
+        "stage3_pytest_after_edit": false,
+        "pytest_fail_kinds": {},
+        "post_edit_pytest_cmds": []
+      },
+      {
+        "task_id": "fastapi_14512",
+        "topology": "S2_single_file_multi_hunk",
+        "max_delta_L": 116,
+        "any_file_delta_L_gt_150": false,
+        "stage3_pytest_after_edit": false,
+        "pytest_fail_kinds": {},
+        "post_edit_pytest_cmds": []
+      },
+      {
+        "task_id": "fastapi_14605",
+        "topology": "S3_multi_file",
+        "max_delta_L": 634,
+        "any_file_delta_L_gt_150": true,
+        "stage3_pytest_after_edit": false,
+        "pytest_fail_kinds": {},
+        "post_edit_pytest_cmds": []
+      },
+      {
+        "task_id": "fastapi_14609",
+        "topology": "S3_multi_file",
+        "max_delta_L": 1939,
+        "any_file_delta_L_gt_150": true,
+        "stage3_pytest_after_edit": false,
+        "pytest_fail_kinds": {},
+        "post_edit_pytest_cmds": []
+      },
+      {
+        "task_id": "fastapi_14986",
+        "topology": "S3_multi_file",
+        "max_delta_L": 178,
+        "any_file_delta_L_gt_150": true,
+        "stage3_pytest_after_edit": false,
+        "pytest_fail_kinds": {},
+        "post_edit_pytest_cmds": []
+      },
+      {
+        "task_id": "requests_7315",
+        "topology": "S1_single_file_single_hunk",
+        "max_delta_L": 0,
+        "any_file_delta_L_gt_150": false,
+        "stage3_pytest_after_edit": false,
+        "pytest_fail_kinds": {},
+        "post_edit_pytest_cmds": []
+      },
+      {
+        "task_id": "requests_7427",
+        "topology": "S1_single_file_single_hunk",
+        "max_delta_L": 0,
+        "any_file_delta_L_gt_150": false,
+        "stage3_pytest_after_edit": true,
+        "pytest_fail_kinds": {
+          "assertion_fail": 6
+        },
+        "post_edit_pytest_cmds": [
+          "pytest tests/test_no_proxy_boundary.py",
+          "pytest tests/test_no_proxy_boundary.py",
+          "pytest tests/test_no_proxy_boundary.py",
+          "pytest tests/test_no_proxy_boundary.py",
+          "pytest tests/test_no_proxy_boundary.py"
+        ]
+      },
+      {
+        "task_id": "rich_2725",
+        "topology": "S1_single_file_single_hunk",
+        "max_delta_L": 0,
+        "any_file_delta_L_gt_150": false,
+        "stage3_pytest_after_edit": false,
+        "pytest_fail_kinds": {},
+        "post_edit_pytest_cmds": []
+      },
+      {
+        "task_id": "rich_3486",
+        "topology": "S3_multi_file",
+        "max_delta_L": 791,
+        "any_file_delta_L_gt_150": true,
+        "stage3_pytest_after_edit": false,
+        "pytest_fail_kinds": {},
+        "post_edit_pytest_cmds": []
+      },
+      {
+        "task_id": "rich_3675",
+        "topology": "S3_multi_file",
+        "max_delta_L": 452,
+        "any_file_delta_L_gt_150": true,
+        "stage3_pytest_after_edit": false,
+        "pytest_fail_kinds": {},
+        "post_edit_pytest_cmds": []
+      },
+      {
+        "task_id": "rich_3882",
+        "topology": "S1_single_file_single_hunk",
+        "max_delta_L": 0,
+        "any_file_delta_L_gt_150": false,
+        "stage3_pytest_after_edit": false,
+        "pytest_fail_kinds": {},
+        "post_edit_pytest_cmds": []
+      }
+    ],
+    "summary": "Only 1/11 gold-edit fails ran post-edit pytest (requests_7427: 6 assertion_fail); 10/11 C2-coincident no post-edit pytest"
+  },
+  "d17_design_intent": {
+    "base": "D7",
+    "add": "If gold/candidate spans >150 lines or multiple @@ hunks suspected: second bounded read_file for the distant sibling site before submit; use allow_multiple only with unique old_string",
+    "motivated_by": "S2 ΔL>150 structural blind spot under read_file cap → C1",
+    "staged_as": "D17_s2_dual_window_master"
+  },
+  "census_rows_compact": [
+    {
+      "task_id": "fastapi_15661",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_15589",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_15030",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 9,
+      "n_gold_hunks": 17,
+      "max_delta_L": 863,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14962",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 3,
+      "n_gold_hunks": 6,
+      "max_delta_L": 192,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_15280",
+      "split": "train_pool",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 3,
+      "max_delta_L": 4553,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14986",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 4,
+      "max_delta_L": 178,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "requests_7505",
+      "split": "train_pool",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 6,
+      "max_delta_L": 603,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "requests_7427",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "requests_7315",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "requests_7205",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_4077",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_4076",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_4075",
+      "split": "train_pool",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 4,
+      "max_delta_L": 2214,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14873",
+      "split": "dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 23,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_13920",
+      "split": "train_pool",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 305,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14794",
+      "split": "dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 13,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14786",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14492",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14479",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14099",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 5,
+      "n_gold_hunks": 13,
+      "max_delta_L": 971,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14609",
+      "split": "smoke",
+      "topology": "S3_multi_file",
+      "n_gold_files": 20,
+      "n_gold_hunks": 92,
+      "max_delta_L": 1939,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14372",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 3,
+      "max_delta_L": 428,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14349",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14512",
+      "split": "dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 3,
+      "max_delta_L": 116,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14487",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_11355",
+      "split": "train_pool",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 3,
+      "max_delta_L": 220,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14482",
+      "split": "dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 5,
+      "max_delta_L": 418,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14306",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 12,
+      "max_delta_L": 460,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14458",
+      "split": "train_pool",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 4,
+      "max_delta_L": 72,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14459",
+      "split": "train_pool",
+      "topology": "S3_multi_file",
+      "n_gold_files": 3,
+      "n_gold_hunks": 8,
+      "max_delta_L": 221,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14448",
+      "split": "train_pool",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 3,
+      "max_delta_L": 73,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14455",
+      "split": "dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 10,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_9753",
+      "split": "dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 78,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_9555",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_13207",
+      "split": "train_pool",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 28,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14360",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14356",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_5624",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14419",
+      "split": "train_pool",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 7,
+      "max_delta_L": 633,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14301",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14262",
+      "split": "train_pool",
+      "topology": "S3_multi_file",
+      "n_gold_files": 10,
+      "n_gold_hunks": 29,
+      "max_delta_L": 2291,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14266",
+      "split": "train_pool",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 29,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14246",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14186",
+      "split": "train_pool",
+      "topology": "S3_multi_file",
+      "n_gold_files": 10,
+      "n_gold_hunks": 51,
+      "max_delta_L": 699,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_9425",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3934",
+      "split": "train_pool",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 3,
+      "max_delta_L": 28,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3944",
+      "split": "smoke",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3942",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 7,
+      "max_delta_L": 246,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "rich_3938",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 2,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3882",
+      "split": "smoke",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3894",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3905",
+      "split": "smoke",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3930",
+      "split": "smoke",
+      "topology": "S3_multi_file",
+      "n_gold_files": 26,
+      "n_gold_hunks": 29,
+      "max_delta_L": 306,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "httpx_3672",
+      "split": "train_pool",
+      "topology": "S3_multi_file",
+      "n_gold_files": 7,
+      "n_gold_hunks": 18,
+      "max_delta_L": 97,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_15800",
+      "split": "smoke",
+      "topology": "S3_multi_file",
+      "n_gold_files": 8,
+      "n_gold_hunks": 20,
+      "max_delta_L": 2596,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14605",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 7,
+      "n_gold_hunks": 20,
+      "max_delta_L": 634,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_15763",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14303",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_13537",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_14953",
+      "split": "train_pool",
+      "topology": "S3_multi_file",
+      "n_gold_files": 4,
+      "n_gold_hunks": 5,
+      "max_delta_L": 13,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "fastapi_13786",
+      "split": "smoke",
+      "topology": "S3_multi_file",
+      "n_gold_files": 11,
+      "n_gold_hunks": 25,
+      "max_delta_L": 609,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_14616",
+      "split": "smoke",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 675,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "fastapi_11194",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "requests_6629",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "requests_6644",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "requests_6589",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "requests_6592",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3180",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 4,
+      "max_delta_L": 120,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3486",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 3,
+      "n_gold_hunks": 12,
+      "max_delta_L": 791,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "rich_3468",
+      "split": "train_pool",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 4,
+      "max_delta_L": 634,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "rich_3772",
+      "split": "train_pool",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 6,
+      "max_delta_L": 557,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "rich_3675",
+      "split": "smoke",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 5,
+      "max_delta_L": 452,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "rich_3676",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 8,
+      "max_delta_L": 410,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "rich_3518",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3535",
+      "split": "dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 2,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3521",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3480",
+      "split": "smoke",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 22,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3470",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3052",
+      "split": "dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 12,
+      "max_delta_L": 353,
+      "any_file_delta_L_gt_150": true
+    },
+    {
+      "task_id": "rich_2943",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_2725",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3105",
+      "split": "train_pool",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3067",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3006",
+      "split": "dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false
+    },
+    {
+      "task_id": "rich_3061",
+      "split": "train_pool",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 13,
+      "max_delta_L": 1035,
+      "any_file_delta_L_gt_150": true
+    }
+  ],
+  "agent_rows": [
+    {
+      "task_id": "fastapi_13786",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 11,
+      "n_gold_hunks": 25,
+      "max_delta_L": 609,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14099",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 5,
+      "n_gold_hunks": 13,
+      "max_delta_L": 971,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": true,
+      "stage4_resolved": false,
+      "n_pytest": 7
+    },
+    {
+      "task_id": "fastapi_14246",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 6
+    },
+    {
+      "task_id": "fastapi_14306",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 12,
+      "max_delta_L": 460,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14349",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14372",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 3,
+      "max_delta_L": 428,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": true,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14455",
+      "src": "hist_smoke_dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 10,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14482",
+      "src": "hist_smoke_dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 5,
+      "max_delta_L": 418,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": false,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14487",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": false,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14512",
+      "src": "hist_smoke_dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 3,
+      "max_delta_L": 116,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14605",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 7,
+      "n_gold_hunks": 20,
+      "max_delta_L": 634,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14609",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 20,
+      "n_gold_hunks": 92,
+      "max_delta_L": 1939,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14616",
+      "src": "hist_smoke_dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 675,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": true,
+      "stage4_resolved": false,
+      "n_pytest": 2
+    },
+    {
+      "task_id": "fastapi_14786",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": true,
+      "stage4_resolved": true,
+      "n_pytest": 2
+    },
+    {
+      "task_id": "fastapi_14794",
+      "src": "hist_smoke_dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 13,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": true,
+      "stage4_resolved": true,
+      "n_pytest": 28
+    },
+    {
+      "task_id": "fastapi_14873",
+      "src": "hist_smoke_dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 23,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": true,
+      "stage4_resolved": false,
+      "n_pytest": 1
+    },
+    {
+      "task_id": "fastapi_14962",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 3,
+      "n_gold_hunks": 6,
+      "max_delta_L": 192,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": false,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_14986",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 4,
+      "max_delta_L": 178,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_15030",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 9,
+      "n_gold_hunks": 17,
+      "max_delta_L": 863,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_15589",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": true,
+      "stage4_resolved": false,
+      "n_pytest": 38
+    },
+    {
+      "task_id": "fastapi_15661",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": false,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_15800",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 8,
+      "n_gold_hunks": 20,
+      "max_delta_L": 2596,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_9425",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": false,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "fastapi_9753",
+      "src": "hist_smoke_dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 78,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": true,
+      "stage4_resolved": false,
+      "n_pytest": 1
+    },
+    {
+      "task_id": "requests_7315",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "requests_7427",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": true,
+      "stage4_resolved": false,
+      "n_pytest": 6
+    },
+    {
+      "task_id": "rich_2725",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3006",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": true,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3052",
+      "src": "hist_smoke_dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 12,
+      "max_delta_L": 353,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3067",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": true,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3180",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 4,
+      "max_delta_L": 120,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3470",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3480",
+      "src": "hist_smoke_dev",
+      "topology": "S2_single_file_multi_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 2,
+      "max_delta_L": 22,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3486",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 3,
+      "n_gold_hunks": 12,
+      "max_delta_L": 791,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3521",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 1
+    },
+    {
+      "task_id": "rich_3535",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 2,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": false,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3675",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 5,
+      "max_delta_L": 452,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3676",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 8,
+      "max_delta_L": 410,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3882",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3894",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": true,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3905",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": true,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": true,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3930",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 26,
+      "n_gold_hunks": 29,
+      "max_delta_L": 306,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 1
+    },
+    {
+      "task_id": "rich_3938",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 2,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": false,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    },
+    {
+      "task_id": "rich_3942",
+      "src": "hist_smoke_dev",
+      "topology": "S3_multi_file",
+      "n_gold_files": 2,
+      "n_gold_hunks": 7,
+      "max_delta_L": 246,
+      "any_file_delta_L_gt_150": true,
+      "stage1_gold_file_read": true,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 2
+    },
+    {
+      "task_id": "rich_3944",
+      "src": "hist_smoke_dev",
+      "topology": "S1_single_file_single_hunk",
+      "n_gold_files": 1,
+      "n_gold_hunks": 1,
+      "max_delta_L": 0,
+      "any_file_delta_L_gt_150": false,
+      "stage1_gold_file_read": false,
+      "stage2_gold_file_edit": false,
+      "stage3_pytest_after_edit": false,
+      "stage4_resolved": false,
+      "n_pytest": 0
+    }
+  ],
+  "staged_D17": {
+    "zip_results": "results/p618_clean_frontier/submission_p640_d17_s2_dual_window_master.zip",
+    "zip_vault": "proprietary_vault/zips/D17_s2_dual_window_master.zip",
+    "agent_dir": "proprietary_vault/agents/D17_s2_dual_window_master",
+    "sha256": "e40fc4503d75aa2a61004eb13bd8e88d73715e64a3bf449c7e801ccbace52c6f",
+    "base": "D7",
+    "g3": "prompt_S2_dual_window_master_on_D7",
+    "prompt_bytes": 4275,
+    "clause_bytes": 281,
+    "prompt_sha12": "ea0f7f4c89d8",
+    "think": 2048,
+    "motivated_by": "S2 ΔL>150 → 0% edit/pass under read_file 150-cap",
+    "appledouble": 0,
+    "check_pass": true,
+    "live_autosubmit": false
+  }
+}

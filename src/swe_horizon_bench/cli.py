@@ -23,6 +23,19 @@ def cmd_localize(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_kbench_suite(args: argparse.Namespace) -> int:
+    from .kbench_tasks import load_ood_dataframe, run_kbench_suite
+
+    df = load_ood_dataframe(args.dataset)
+    board = run_kbench_suite(df=df, out_json=args.out)
+    if hasattr(board, "to_dict"):
+        print(board.to_string(index=False))
+    else:
+        print(json.dumps(board, indent=2))
+    print(f"WROTE {args.out}")
+    return 0
+
+
 def cmd_evaluate_ood(args: argparse.Namespace) -> int:
     path = Path(args.dataset)
     if not path.is_file():
@@ -77,6 +90,17 @@ def main(argv: list[str] | None = None) -> int:
     )
     ev.add_argument("--out", default=None)
     ev.set_defaults(func=cmd_evaluate_ood)
+
+    kb = sub.add_parser("kbench-suite", help="Run native @kbench.task suite on OOD (offline or live SDK)")
+    kb.add_argument(
+        "--dataset",
+        default=str(Path(__file__).resolve().parents[2] / "data" / "swe_horizon_bench_ood_60.jsonl"),
+    )
+    kb.add_argument(
+        "--out",
+        default=str(Path(__file__).resolve().parents[2] / "data" / "swe_horizon_bench_kbench_leaderboard.json"),
+    )
+    kb.set_defaults(func=cmd_kbench_suite)
 
     args = p.parse_args(argv)
     return int(args.func(args))

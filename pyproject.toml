@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "swe-horizon-bench"
-version = "0.1.0"
-description = "AST-HorizonGraph localization, MS-SFT trajectory selection, and SWE-HorizonBench-OOD"
+version = "0.1.1"
+description = "AST-HorizonGraph localization, MS-SFT, SWE-HorizonBench-OOD, and native @kbench.task suite"
 readme = "README.md"
 license = { text = "Apache-2.0" }
 requires-python = ">=3.10"

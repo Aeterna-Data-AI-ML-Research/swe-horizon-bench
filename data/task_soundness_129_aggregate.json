@@ -1,0 +1,27 @@
+{
+  "source": "gemma4-agent/results/soundness.csv",
+  "n_rows": 129,
+  "usable": 111,
+  "unusable": 18,
+  "patterns": {
+    "usable": 111,
+    "empty_fail_oracle_pass": 112,
+    "unusable": 18,
+    "both_fail": 16
+  },
+  "unusable_error_top": [
+    [
+      "oracle_fail",
+      16
+    ],
+    [
+      "empty_unexpected_pass",
+      1
+    ],
+    [
+      "empty",
+      1
+    ]
+  ],
+  "definition": "usable iff empty_pass and oracle_pass per soundness_check.py (see harness_verify.md)"
+}

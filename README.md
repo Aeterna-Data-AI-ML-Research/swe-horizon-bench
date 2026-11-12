@@ -39,7 +39,7 @@ gate = two_sided_sound(empty_pass=False, oracle_pass=True, candidate_pass=True)
 - `data/swe_horizon_bench_ood_60.jsonl` — 60 tasks across 8 external libraries  
   (`starlette`, `click`, `typer`, `urllib3`, `packaging`, `pluggy`, `anyio`, `httpcore`)  
   with **0% overlap** vs competition `{fastapi, rich, requests, httpx}` task IDs.
-- Stratified: 20 S1 (10≤150 / 10>150), 20 S2 (10 ΔL≤150 / 10 ΔL>150), 20 S3.
+- Stratified (diff-classified): 18 S1 (8 ≤150 / 10 >150), 22 S2 (11 ΔL≤150 / 11 ΔL>150), 20 S3.
 - `data/swe_horizon_bench_ood_eval.json` — AST-HorizonGraph Recall@1/2/3 vs B1 and sequential pagination.
 
 ```bash

@@ -1,0 +1,320 @@
+{
+  "ticket": "P6.74",
+  "written_utc": "2026-10-30T18:15:54Z",
+  "ast_eval": {
+    "n_tasks_evaluated": 60,
+    "S1_le150": {
+      "ast_recall@1": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "ast_recall@2": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "ast_recall@3": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "b1_recall@1": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "b1_recall@2": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "b1_recall@3": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "seq_recall@1": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "seq_recall@2": {
+        "n": 8,
+        "mean": 1.0
+      },
+      "seq_recall@3": {
+        "n": 8,
+        "mean": 1.0
+      }
+    },
+    "S1_gt150": {
+      "ast_recall@1": {
+        "n": 10,
+        "mean": 0.0
+      },
+      "ast_recall@2": {
+        "n": 10,
+        "mean": 0.8
+      },
+      "ast_recall@3": {
+        "n": 10,
+        "mean": 0.9
+      },
+      "b1_recall@1": {
+        "n": 10,
+        "mean": 0.0
+      },
+      "b1_recall@2": {
+        "n": 10,
+        "mean": 0.0
+      },
+      "b1_recall@3": {
+        "n": 10,
+        "mean": 0.0
+      },
+      "seq_recall@1": {
+        "n": 10,
+        "mean": 0.0
+      },
+      "seq_recall@2": {
+        "n": 10,
+        "mean": 1.0
+      },
+      "seq_recall@3": {
+        "n": 10,
+        "mean": 1.0
+      }
+    },
+    "S2": {
+      "ast_recall@1": {
+        "n": 22,
+        "mean": 0.75
+      },
+      "ast_recall@2": {
+        "n": 22,
+        "mean": 0.8409090909090909
+      },
+      "ast_recall@3": {
+        "n": 22,
+        "mean": 0.9318181818181818
+      },
+      "b1_recall@1": {
+        "n": 22,
+        "mean": 0.75
+      },
+      "b1_recall@2": {
+        "n": 22,
+        "mean": 0.75
+      },
+      "b1_recall@3": {
+        "n": 22,
+        "mean": 0.75
+      },
+      "seq_recall@1": {
+        "n": 22,
+        "mean": 0.75
+      },
+      "seq_recall@2": {
+        "n": 22,
+        "mean": 0.8181818181818182
+      },
+      "seq_recall@3": {
+        "n": 22,
+        "mean": 0.8636363636363636
+      }
+    },
+    "S2_deltaL_gt150": {
+      "ast_recall@1": {
+        "n": 11,
+        "mean": 0.5
+      },
+      "ast_recall@2": {
+        "n": 11,
+        "mean": 0.6818181818181818
+      },
+      "ast_recall@3": {
+        "n": 11,
+        "mean": 0.8636363636363636
+      },
+      "b1_recall@1": {
+        "n": 11,
+        "mean": 0.5
+      },
+      "b1_recall@2": {
+        "n": 11,
+        "mean": 0.5
+      },
+      "b1_recall@3": {
+        "n": 11,
+        "mean": 0.5
+      },
+      "seq_recall@1": {
+        "n": 11,
+        "mean": 0.5
+      },
+      "seq_recall@2": {
+        "n": 11,
+        "mean": 0.6363636363636364
+      },
+      "seq_recall@3": {
+        "n": 11,
+        "mean": 0.7272727272727273
+      }
+    },
+    "S3": {
+      "ast_recall@1": {
+        "n": 20,
+        "mean": 0.45
+      },
+      "ast_recall@2": {
+        "n": 20,
+        "mean": 0.95
+      },
+      "ast_recall@3": {
+        "n": 20,
+        "mean": 0.975
+      },
+      "b1_recall@1": {
+        "n": 20,
+        "mean": 0.45
+      },
+      "b1_recall@2": {
+        "n": 20,
+        "mean": 0.95
+      },
+      "b1_recall@3": {
+        "n": 20,
+        "mean": 0.95
+      },
+      "seq_recall@1": {
+        "n": 20,
+        "mean": 0.45
+      },
+      "seq_recall@2": {
+        "n": 20,
+        "mean": 0.45
+      },
+      "seq_recall@3": {
+        "n": 20,
+        "mean": 0.5
+      }
+    }
+  },
+  "upgrade": "subtoken-IDF + E_attr + header-bridge K=1 + header/deep companion K>=2",
+  "libs": [
+    "anyio",
+    "click",
+    "httpcore",
+    "packaging",
+    "pluggy",
+    "starlette",
+    "typer",
+    "urllib3"
+  ],
+  "two_sided_verify": {
+    "n": 11,
+    "n_usable_two_sided": 11,
+    "rows": [
+      {
+        "task_id": "ood_click_s1__make_text_stream_22",
+        "repo": "click",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_typer_s1__make_text_stream_23",
+        "repo": "typer",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_typer_s1_is_ascii_encoding_38",
+        "repo": "typer",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_urllib3_s1_add_stderr_logger_74",
+        "repo": "urllib3",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_urllib3_s1_disable_warnings_107",
+        "repo": "urllib3",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_packaging_s1_ELFFile___init___45",
+        "repo": "packaging",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_packaging_s1_ELFFile__read_90",
+        "repo": "packaging",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_starlette_s1_UnauthenticatedUser_display_name_152",
+        "repo": "starlette",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_pluggy_s3___init____caller_32_67",
+        "repo": "pluggy",
+        "topology": "S3_multi_file",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_anyio_s3__asyncio__trio_311_150",
+        "repo": "anyio",
+        "topology": "S3_multi_file",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      },
+      {
+        "task_id": "ood_httpcore_s1_request_10",
+        "repo": "httpcore",
+        "topology": "S1_single_hunk",
+        "empty_pass": false,
+        "oracle_pass": true,
+        "usable": true,
+        "sound_rule": "empty_pass==False AND oracle_pass==True"
+      }
+    ]
+  },
+  "strata": {
+    "S1_le150": 8,
+    "S1_gt150": 10,
+    "S2_le150": 11,
+    "S2_gt150": 11,
+    "S3": 20
+  }
+}

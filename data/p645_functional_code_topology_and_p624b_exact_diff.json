@@ -1,0 +1,1780 @@
+{
+  "ticket": "P6.45-filter-functional-code-hunks-vs-docs-and-audit-fastapi-14616",
+  "written_utc": "2026-10-30T09:39:31Z",
+  "g4_holdout_excluded": true,
+  "holdout_leaks": [],
+  "filter_definition": {
+    "functional": "package .py excluding docs/, docs_src/, *.md/*.rst, changelog, tests/, rich/_unicode_data/unicode*.py tables, rich/_cell_widths.py",
+    "note": "Unicode data tables are .py but mechanical bulk; tests may still import rich._unicode_data package API"
+  },
+  "census_n85": {
+    "n": 85,
+    "raw_topology_counts": {
+      "S1_single_file_single_hunk": 39,
+      "S3_multi_file": 28,
+      "S2_single_file_multi_hunk": 18
+    },
+    "functional_topology_counts": {
+      "S1_single_file_single_hunk": 37,
+      "S3_multi_file": 27,
+      "S2_single_file_multi_hunk": 19,
+      "EMPTY": 2
+    },
+    "raw_shares_pct": {
+      "S1_single_file_single_hunk": 45.9,
+      "S3_multi_file": 32.9,
+      "S2_single_file_multi_hunk": 21.2
+    },
+    "functional_shares_pct": {
+      "S1_single_file_single_hunk": 43.5,
+      "S3_multi_file": 31.8,
+      "S2_single_file_multi_hunk": 22.4,
+      "EMPTY": 2.4
+    }
+  },
+  "s3_filter_impact": {
+    "n_s3_raw": 28,
+    "n_with_nonfunc_files": 10,
+    "n_leave_S3_after_filter": 1,
+    "rows": [
+      {
+        "task_id": "fastapi_15030",
+        "raw_n_files": 9,
+        "raw_n_hunks": 17,
+        "func_n_files": 4,
+        "func_n_hunks": 12,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "docs_or_docs_src"
+        ],
+        "nonfunc_files": [
+          "docs_src/server_sent_events/tutorial001_py310.py",
+          "docs_src/server_sent_events/tutorial002_py310.py",
+          "docs_src/server_sent_events/tutorial003_py310.py",
+          "docs_src/server_sent_events/tutorial004_py310.py",
+          "docs_src/server_sent_events/tutorial005_py310.py"
+        ],
+        "func_files": [
+          "fastapi/openapi/utils.py",
+          "fastapi/responses.py",
+          "fastapi/routing.py",
+          "fastapi/sse.py"
+        ],
+        "test_files": [
+          "tests/test_sse.py",
+          "tests/test_tutorial/test_server_sent_events/test_tutorial001.py",
+          "tests/test_tutorial/test_server_sent_events/test_tutorial002.py",
+          "tests/test_tutorial/test_server_sent_events/test_tutorial003.py",
+          "tests/test_tutorial/test_server_sent_events/test_tutorial004.py",
+          "tests/test_tutorial/test_server_sent_events/test_tutorial005.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.responses",
+          "fastapi.routing",
+          "fastapi.sse",
+          "fastapi.testclient",
+          "pydantic"
+        ]
+      },
+      {
+        "task_id": "fastapi_14962",
+        "raw_n_files": 3,
+        "raw_n_hunks": 6,
+        "func_n_files": 2,
+        "func_n_hunks": 5,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "docs_or_docs_src"
+        ],
+        "nonfunc_files": [
+          "docs_src/custom_response/tutorial010_py310.py"
+        ],
+        "func_files": [
+          "fastapi/_compat/v2.py",
+          "fastapi/routing.py"
+        ],
+        "test_files": [
+          "tests/test_dump_json_fast_path.py",
+          "tests/test_tutorial/test_custom_response/test_tutorial001.py",
+          "tests/test_tutorial/test_custom_response/test_tutorial010.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.responses",
+          "fastapi.testclient",
+          "pydantic"
+        ]
+      },
+      {
+        "task_id": "fastapi_15280",
+        "raw_n_files": 2,
+        "raw_n_hunks": 3,
+        "func_n_files": 1,
+        "func_n_hunks": 2,
+        "func_topology": "S2_single_file_multi_hunk",
+        "bulk_reasons": [
+          "docs_or_docs_src"
+        ],
+        "nonfunc_files": [
+          "docs_src/vibe/tutorial001_py310.py"
+        ],
+        "func_files": [
+          "fastapi/applications.py"
+        ],
+        "test_files": [
+          "tests/test_vibe.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.exceptions"
+        ]
+      },
+      {
+        "task_id": "fastapi_14986",
+        "raw_n_files": 2,
+        "raw_n_hunks": 4,
+        "func_n_files": 2,
+        "func_n_hunks": 4,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "fastapi/applications.py",
+          "fastapi/openapi/docs.py"
+        ],
+        "test_files": [
+          "tests/test_openapi_cache_root_path.py",
+          "tests/test_swagger_ui_escape.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.openapi.docs",
+          "fastapi.testclient"
+        ]
+      },
+      {
+        "task_id": "requests_7505",
+        "raw_n_files": 2,
+        "raw_n_hunks": 6,
+        "func_n_files": 2,
+        "func_n_hunks": 6,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "src/requests/_types.py",
+          "src/requests/models.py"
+        ],
+        "test_files": [
+          "tests/test_requests.py"
+        ],
+        "package_imports": []
+      },
+      {
+        "task_id": "fastapi_14099",
+        "raw_n_files": 5,
+        "raw_n_hunks": 13,
+        "func_n_files": 3,
+        "func_n_hunks": 11,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "docs_or_docs_src"
+        ],
+        "nonfunc_files": [
+          "docs_src/dependencies/tutorial013_an_py310.py",
+          "docs_src/dependencies/tutorial014_an_py310.py"
+        ],
+        "func_files": [
+          "fastapi/applications.py",
+          "fastapi/middleware/asyncexitstack.py",
+          "fastapi/routing.py"
+        ],
+        "test_files": [
+          "tests/test_dependency_after_yield_raise.py",
+          "tests/test_dependency_after_yield_streaming.py",
+          "tests/test_dependency_after_yield_websockets.py",
+          "tests/test_dependency_contextmanager.py",
+          "tests/test_route_scope.py",
+          "tests/test_tutorial/test_dependencies/test_tutorial008c.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.responses",
+          "fastapi.testclient"
+        ]
+      },
+      {
+        "task_id": "fastapi_14609",
+        "raw_n_files": 20,
+        "raw_n_hunks": 92,
+        "func_n_files": 18,
+        "func_n_hunks": 90,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "docs_or_docs_src",
+          "broad_api_refactor_many_functional_modules"
+        ],
+        "nonfunc_files": [
+          "docs_src/request_form_models/tutorial002_pv1_an_py39.py",
+          "docs_src/request_form_models/tutorial002_pv1_py39.py"
+        ],
+        "func_files": [
+          "fastapi/_compat/__init__.py",
+          "fastapi/_compat/main.py",
+          "fastapi/_compat/may_v1.py",
+          "fastapi/_compat/model_field.py",
+          "fastapi/_compat/shared.py",
+          "fastapi/_compat/v1.py",
+          "fastapi/_compat/v2.py",
+          "fastapi/datastructures.py",
+          "fastapi/dependencies/utils.py",
+          "fastapi/encoders.py",
+          "fastapi/exceptions.py",
+          "fastapi/openapi/models.py",
+          "fastapi/openapi/utils.py",
+          "fastapi/param_functions.py",
+          "fastapi/params.py",
+          "fastapi/routing.py",
+          "fastapi/temp_pydantic_v1_params.py",
+          "fastapi/utils.py"
+        ],
+        "test_files": [
+          "tests/test_compat.py",
+          "tests/test_compat_params_v1.py",
+          "tests/test_datetime_custom_encoder.py",
+          "tests/test_filter_pydantic_sub_model/app_pv1.py",
+          "tests/test_filter_pydantic_sub_model/test_filter_pydantic_sub_model_pv1.py",
+          "tests/test_get_model_definitions_formfeed_escape.py",
+          "tests/test_inherited_custom_class.py",
+          "tests/test_jsonable_encoder.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi._compat",
+          "fastapi._compat.shared",
+          "fastapi._compat.v1",
+          "fastapi.encoders",
+          "fastapi.exceptions",
+          "fastapi.temp_pydantic_v1_params",
+          "fastapi.testclient",
+          "pydantic",
+          "pydantic.fields",
+          "pydantic.v1"
+        ]
+      },
+      {
+        "task_id": "fastapi_14372",
+        "raw_n_files": 2,
+        "raw_n_hunks": 3,
+        "func_n_files": 2,
+        "func_n_hunks": 3,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "fastapi/dependencies/utils.py",
+          "fastapi/params.py"
+        ],
+        "test_files": [
+          "tests/test_depends_hashable.py"
+        ],
+        "package_imports": [
+          "fastapi"
+        ]
+      },
+      {
+        "task_id": "fastapi_14306",
+        "raw_n_files": 2,
+        "raw_n_hunks": 12,
+        "func_n_files": 2,
+        "func_n_hunks": 12,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "fastapi/exceptions.py",
+          "fastapi/routing.py"
+        ],
+        "test_files": [
+          "tests/test_validation_error_context.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.exceptions",
+          "fastapi.testclient",
+          "pydantic"
+        ]
+      },
+      {
+        "task_id": "fastapi_14459",
+        "raw_n_files": 3,
+        "raw_n_hunks": 8,
+        "func_n_files": 3,
+        "func_n_hunks": 8,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "fastapi/dependencies/models.py",
+          "fastapi/dependencies/utils.py",
+          "fastapi/openapi/utils.py"
+        ],
+        "test_files": [
+          "tests/test_security_oauth2_authorization_code_bearer_scopes_openapi.py",
+          "tests/test_security_oauth2_authorization_code_bearer_scopes_openapi_simple.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.security",
+          "fastapi.testclient"
+        ]
+      },
+      {
+        "task_id": "fastapi_14448",
+        "raw_n_files": 2,
+        "raw_n_hunks": 3,
+        "func_n_files": 2,
+        "func_n_hunks": 3,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "fastapi/dependencies/models.py",
+          "fastapi/dependencies/utils.py"
+        ],
+        "test_files": [
+          "tests/test_dependency_wrapped.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.concurrency",
+          "fastapi.testclient"
+        ]
+      },
+      {
+        "task_id": "fastapi_14419",
+        "raw_n_files": 2,
+        "raw_n_hunks": 7,
+        "func_n_files": 2,
+        "func_n_hunks": 7,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "fastapi/dependencies/models.py",
+          "fastapi/dependencies/utils.py"
+        ],
+        "test_files": [
+          "tests/test_security_scopes.py",
+          "tests/test_security_scopes_sub_dependency.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.security",
+          "fastapi.testclient"
+        ]
+      },
+      {
+        "task_id": "fastapi_14262",
+        "raw_n_files": 10,
+        "raw_n_hunks": 29,
+        "func_n_files": 7,
+        "func_n_hunks": 26,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "docs_or_docs_src"
+        ],
+        "nonfunc_files": [
+          "docs_src/dependencies/tutorial008e.py",
+          "docs_src/dependencies/tutorial008e_an.py",
+          "docs_src/dependencies/tutorial008e_an_py39.py"
+        ],
+        "func_files": [
+          "fastapi/dependencies/models.py",
+          "fastapi/dependencies/utils.py",
+          "fastapi/exceptions.py",
+          "fastapi/param_functions.py",
+          "fastapi/params.py",
+          "fastapi/routing.py",
+          "fastapi/types.py"
+        ],
+        "test_files": [
+          "tests/test_dependency_yield_scope.py",
+          "tests/test_dependency_yield_scope_websockets.py",
+          "tests/test_tutorial/test_dependencies/test_tutorial008e.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.exceptions",
+          "fastapi.responses",
+          "fastapi.testclient"
+        ]
+      },
+      {
+        "task_id": "fastapi_14186",
+        "raw_n_files": 10,
+        "raw_n_hunks": 51,
+        "func_n_files": 10,
+        "func_n_hunks": 51,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "broad_api_refactor_many_functional_modules"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "fastapi/_compat/__init__.py",
+          "fastapi/_compat/main.py",
+          "fastapi/_compat/may_v1.py",
+          "fastapi/_compat/shared.py",
+          "fastapi/_compat/v1.py",
+          "fastapi/_compat/v2.py",
+          "fastapi/dependencies/utils.py",
+          "fastapi/encoders.py",
+          "fastapi/temp_pydantic_v1_params.py",
+          "fastapi/utils.py"
+        ],
+        "test_files": [
+          "tests/test_compat.py",
+          "tests/test_get_model_definitions_formfeed_escape.py",
+          "tests/test_response_model_as_return_annotation.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi._compat",
+          "fastapi._compat.shared",
+          "fastapi.exceptions",
+          "fastapi.responses",
+          "fastapi.testclient",
+          "pydantic",
+          "pydantic.schema",
+          "starlette.testclient"
+        ]
+      },
+      {
+        "task_id": "rich_3934",
+        "raw_n_files": 2,
+        "raw_n_hunks": 3,
+        "func_n_files": 2,
+        "func_n_hunks": 3,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "rich/live.py",
+          "rich/live_render.py"
+        ],
+        "test_files": [
+          "tests/test_live.py"
+        ],
+        "package_imports": [
+          "rich.console"
+        ]
+      },
+      {
+        "task_id": "rich_3942",
+        "raw_n_files": 2,
+        "raw_n_hunks": 7,
+        "func_n_files": 2,
+        "func_n_hunks": 7,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "rich/default_styles.py",
+          "rich/markdown.py"
+        ],
+        "test_files": [
+          "tests/_card_render.py",
+          "tests/test_markdown.py",
+          "tests/test_markdown_no_hyperlinks.py"
+        ],
+        "package_imports": []
+      },
+      {
+        "task_id": "rich_3938",
+        "raw_n_files": 2,
+        "raw_n_hunks": 2,
+        "func_n_files": 2,
+        "func_n_hunks": 2,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "rich/console.py",
+          "rich/segment.py"
+        ],
+        "test_files": [
+          "tests/test_segment.py",
+          "tests/test_text.py"
+        ],
+        "package_imports": []
+      },
+      {
+        "task_id": "rich_3930",
+        "raw_n_files": 26,
+        "raw_n_hunks": 29,
+        "func_n_files": 4,
+        "func_n_hunks": 7,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "bulk_unicode_or_width_tables"
+        ],
+        "nonfunc_files": [
+          "rich/_cell_widths.py",
+          "rich/_unicode_data/unicode10-0-0.py",
+          "rich/_unicode_data/unicode11-0-0.py",
+          "rich/_unicode_data/unicode12-0-0.py",
+          "rich/_unicode_data/unicode12-1-0.py",
+          "rich/_unicode_data/unicode13-0-0.py",
+          "rich/_unicode_data/unicode14-0-0.py",
+          "rich/_unicode_data/unicode15-0-0.py",
+          "rich/_unicode_data/unicode15-1-0.py",
+          "rich/_unicode_data/unicode16-0-0.py",
+          "rich/_unicode_data/unicode17-0-0.py",
+          "rich/_unicode_data/unicode4-1-0.py",
+          "rich/_unicode_data/unicode5-0-0.py",
+          "rich/_unicode_data/unicode5-1-0.py",
+          "rich/_unicode_data/unicode5-2-0.py",
+          "rich/_unicode_data/unicode6-0-0.py",
+          "rich/_unicode_data/unicode6-1-0.py",
+          "rich/_unicode_data/unicode6-2-0.py",
+          "rich/_unicode_data/unicode6-3-0.py",
+          "rich/_unicode_data/unicode7-0-0.py",
+          "rich/_unicode_data/unicode8-0-0.py",
+          "rich/_unicode_data/unicode9-0-0.py"
+        ],
+        "func_files": [
+          "rich/__main__.py",
+          "rich/_unicode_data/__init__.py",
+          "rich/_unicode_data/_versions.py",
+          "rich/cells.py"
+        ],
+        "test_files": [
+          "tests/test_cells.py",
+          "tests/test_text.py",
+          "tests/test_unicode_data.py"
+        ],
+        "package_imports": [
+          "rich",
+          "rich._unicode_data",
+          "rich.cells"
+        ]
+      },
+      {
+        "task_id": "httpx_3672",
+        "raw_n_files": 7,
+        "raw_n_hunks": 18,
+        "func_n_files": 7,
+        "func_n_hunks": 18,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "src/ahttpx/_parsers.py",
+          "src/ahttpx/_pool.py",
+          "src/ahttpx/_server.py",
+          "src/httpx/_network.py",
+          "src/httpx/_parsers.py",
+          "src/httpx/_pool.py",
+          "src/httpx/_server.py"
+        ],
+        "test_files": [
+          "tests/test_parsers.py"
+        ],
+        "package_imports": []
+      },
+      {
+        "task_id": "fastapi_15800",
+        "raw_n_files": 8,
+        "raw_n_hunks": 20,
+        "func_n_files": 2,
+        "func_n_hunks": 14,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "docs_or_docs_src",
+          "mechanical_bulk_dominates"
+        ],
+        "nonfunc_files": [
+          "docs_src/frontend/tutorial001_py310.py",
+          "docs_src/frontend/tutorial002_py310.py",
+          "docs_src/frontend/tutorial003_py310.py",
+          "docs_src/frontend/tutorial004_py310.py",
+          "docs_src/frontend/tutorial005_py310.py",
+          "docs_src/frontend/tutorial006_py310.py"
+        ],
+        "func_files": [
+          "fastapi/applications.py",
+          "fastapi/routing.py"
+        ],
+        "test_files": [
+          "tests/test_frontend.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.testclient",
+          "starlette.exceptions",
+          "starlette.responses",
+          "starlette.routing"
+        ]
+      },
+      {
+        "task_id": "fastapi_14605",
+        "raw_n_files": 7,
+        "raw_n_hunks": 20,
+        "func_n_files": 7,
+        "func_n_hunks": 20,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "fastapi/dependencies/utils.py",
+          "fastapi/exceptions.py",
+          "fastapi/openapi/utils.py",
+          "fastapi/params.py",
+          "fastapi/routing.py",
+          "fastapi/temp_pydantic_v1_params.py",
+          "fastapi/utils.py"
+        ],
+        "test_files": [
+          "tests/benchmarks/test_general_performance.py",
+          "tests/test_compat_params_v1.py",
+          "tests/test_pydantic_v1_deprecation_warnings.py",
+          "tests/test_regex_deprecated_body.py",
+          "tests/test_regex_deprecated_params.py",
+          "tests/test_schema_extra_examples.py",
+          "tests/test_tutorial/test_pydantic_v1_in_v2/test_tutorial002.py",
+          "tests/test_tutorial/test_pydantic_v1_in_v2/test_tutorial003.py",
+          "tests/test_tutorial/test_pydantic_v1_in_v2/test_tutorial004.py",
+          "tests/test_tutorial/test_query_params_str_validations/test_tutorial004.py",
+          "tests/test_tutorial/test_request_form_models/test_tutorial002_pv1.py",
+          "tests/test_tutorial/test_schema_extra_example/test_tutorial001_pv1.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.exceptions",
+          "fastapi.testclient",
+          "pydantic"
+        ]
+      },
+      {
+        "task_id": "fastapi_14953",
+        "raw_n_files": 4,
+        "raw_n_hunks": 5,
+        "func_n_files": 3,
+        "func_n_hunks": 4,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "docs_or_docs_src"
+        ],
+        "nonfunc_files": [
+          "docs_src/json_base64_bytes/tutorial001_py310.py"
+        ],
+        "func_files": [
+          "fastapi/_compat/v2.py",
+          "fastapi/datastructures.py",
+          "scripts/playwright/json_base64_bytes/image01.py"
+        ],
+        "test_files": [
+          "tests/test_request_params/test_file/test_list.py",
+          "tests/test_request_params/test_file/test_optional.py",
+          "tests/test_request_params/test_file/test_optional_list.py",
+          "tests/test_request_params/test_file/test_required.py",
+          "tests/test_tutorial/test_json_base64_bytes/test_tutorial001.py",
+          "tests/test_tutorial/test_request_files/test_tutorial001.py",
+          "tests/test_tutorial/test_request_files/test_tutorial001_02.py",
+          "tests/test_tutorial/test_request_files/test_tutorial001_03.py",
+          "tests/test_tutorial/test_request_files/test_tutorial002.py",
+          "tests/test_tutorial/test_request_files/test_tutorial003.py",
+          "tests/test_tutorial/test_request_forms_and_files/test_tutorial001.py"
+        ],
+        "package_imports": [
+          "fastapi.testclient"
+        ]
+      },
+      {
+        "task_id": "fastapi_13786",
+        "raw_n_files": 11,
+        "raw_n_hunks": 25,
+        "func_n_files": 4,
+        "func_n_hunks": 18,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "docs_or_docs_src"
+        ],
+        "nonfunc_files": [
+          "docs_src/authentication_error_status_code/tutorial001_an.py",
+          "docs_src/authentication_error_status_code/tutorial001_an_py39.py",
+          "docs_src/security/tutorial003.py",
+          "docs_src/security/tutorial003_an.py",
+          "docs_src/security/tutorial003_an_py310.py",
+          "docs_src/security/tutorial003_an_py39.py",
+          "docs_src/security/tutorial003_py310.py"
+        ],
+        "func_files": [
+          "fastapi/security/api_key.py",
+          "fastapi/security/http.py",
+          "fastapi/security/oauth2.py",
+          "fastapi/security/open_id_connect_url.py"
+        ],
+        "test_files": [
+          "tests/test_security_api_key_cookie.py",
+          "tests/test_security_api_key_cookie_description.py",
+          "tests/test_security_api_key_header.py",
+          "tests/test_security_api_key_header_description.py",
+          "tests/test_security_api_key_query.py",
+          "tests/test_security_api_key_query_description.py",
+          "tests/test_security_http_base.py",
+          "tests/test_security_http_base_description.py",
+          "tests/test_security_http_basic_optional.py",
+          "tests/test_security_http_basic_realm.py",
+          "tests/test_security_http_basic_realm_description.py",
+          "tests/test_security_http_bearer.py",
+          "tests/test_security_http_bearer_description.py",
+          "tests/test_security_http_digest.py",
+          "tests/test_security_http_digest_description.py",
+          "tests/test_security_oauth2.py",
+          "tests/test_security_openid_connect.py"
+        ],
+        "package_imports": []
+      },
+      {
+        "task_id": "rich_3180",
+        "raw_n_files": 2,
+        "raw_n_hunks": 4,
+        "func_n_files": 2,
+        "func_n_hunks": 4,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "rich/_wrap.py",
+          "rich/cells.py"
+        ],
+        "test_files": [
+          "tests/test_cells.py",
+          "tests/test_text.py"
+        ],
+        "package_imports": [
+          "rich",
+          "rich.cells"
+        ]
+      },
+      {
+        "task_id": "rich_3486",
+        "raw_n_files": 3,
+        "raw_n_hunks": 12,
+        "func_n_files": 3,
+        "func_n_hunks": 12,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "rich/default_styles.py",
+          "rich/syntax.py",
+          "rich/traceback.py"
+        ],
+        "test_files": [
+          "tests/test_traceback.py"
+        ],
+        "package_imports": []
+      },
+      {
+        "task_id": "rich_3675",
+        "raw_n_files": 2,
+        "raw_n_hunks": 5,
+        "func_n_files": 2,
+        "func_n_hunks": 5,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "rich/console.py",
+          "rich/diagnose.py"
+        ],
+        "test_files": [
+          "tests/test_console.py"
+        ],
+        "package_imports": []
+      },
+      {
+        "task_id": "rich_3676",
+        "raw_n_files": 2,
+        "raw_n_hunks": 8,
+        "func_n_files": 2,
+        "func_n_hunks": 8,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "rich/default_styles.py",
+          "rich/traceback.py"
+        ],
+        "test_files": [
+          "tests/test_traceback.py"
+        ],
+        "package_imports": []
+      },
+      {
+        "task_id": "rich_3535",
+        "raw_n_files": 2,
+        "raw_n_hunks": 2,
+        "func_n_files": 2,
+        "func_n_hunks": 2,
+        "func_topology": "S3_multi_file",
+        "bulk_reasons": [
+          "mostly_functional"
+        ],
+        "nonfunc_files": [],
+        "func_files": [
+          "rich/cells.py",
+          "rich/segment.py"
+        ],
+        "test_files": [
+          "tests/test_cells.py"
+        ],
+        "package_imports": [
+          "rich",
+          "rich.cells"
+        ]
+      }
+    ]
+  },
+  "focus_tasks": {
+    "fastapi_14609": {
+      "task_id": "fastapi_14609",
+      "split": "smoke",
+      "raw": {
+        "topology": "S3_multi_file",
+        "n_files": 20,
+        "n_hunks": 92,
+        "max_delta_L": 1939,
+        "files": [
+          "docs_src/request_form_models/tutorial002_pv1_an_py39.py",
+          "docs_src/request_form_models/tutorial002_pv1_py39.py",
+          "fastapi/_compat/__init__.py",
+          "fastapi/_compat/main.py",
+          "fastapi/_compat/may_v1.py",
+          "fastapi/_compat/model_field.py",
+          "fastapi/_compat/shared.py",
+          "fastapi/_compat/v1.py",
+          "fastapi/_compat/v2.py",
+          "fastapi/datastructures.py",
+          "fastapi/dependencies/utils.py",
+          "fastapi/encoders.py",
+          "fastapi/exceptions.py",
+          "fastapi/openapi/models.py",
+          "fastapi/openapi/utils.py",
+          "fastapi/param_functions.py",
+          "fastapi/params.py",
+          "fastapi/routing.py",
+          "fastapi/temp_pydantic_v1_params.py",
+          "fastapi/utils.py"
+        ]
+      },
+      "functional": {
+        "topology": "S3_multi_file",
+        "n_files": 18,
+        "n_hunks": 90,
+        "max_delta_L": 1939,
+        "files": [
+          "fastapi/_compat/__init__.py",
+          "fastapi/_compat/main.py",
+          "fastapi/_compat/may_v1.py",
+          "fastapi/_compat/model_field.py",
+          "fastapi/_compat/shared.py",
+          "fastapi/_compat/v1.py",
+          "fastapi/_compat/v2.py",
+          "fastapi/datastructures.py",
+          "fastapi/dependencies/utils.py",
+          "fastapi/encoders.py",
+          "fastapi/exceptions.py",
+          "fastapi/openapi/models.py",
+          "fastapi/openapi/utils.py",
+          "fastapi/param_functions.py",
+          "fastapi/params.py",
+          "fastapi/routing.py",
+          "fastapi/temp_pydantic_v1_params.py",
+          "fastapi/utils.py"
+        ]
+      },
+      "n_nonfunc_files": 2,
+      "n_func_files": 18,
+      "bulk_reasons": [
+        "docs_or_docs_src",
+        "broad_api_refactor_many_functional_modules"
+      ],
+      "test_patch": {
+        "n_test_files": 8,
+        "test_files": [
+          "tests/test_compat.py",
+          "tests/test_compat_params_v1.py",
+          "tests/test_datetime_custom_encoder.py",
+          "tests/test_filter_pydantic_sub_model/app_pv1.py",
+          "tests/test_filter_pydantic_sub_model/test_filter_pydantic_sub_model_pv1.py",
+          "tests/test_get_model_definitions_formfeed_escape.py",
+          "tests/test_inherited_custom_class.py",
+          "tests/test_jsonable_encoder.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi._compat",
+          "fastapi._compat.shared",
+          "fastapi._compat.v1",
+          "fastapi.encoders",
+          "fastapi.exceptions",
+          "fastapi.temp_pydantic_v1_params",
+          "fastapi.testclient",
+          "pydantic",
+          "pydantic.fields",
+          "pydantic.v1"
+        ]
+      },
+      "all_files_annotated": [
+        {
+          "file": "docs_src/request_form_models/tutorial002_pv1_an_py39.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "docs_src/request_form_models/tutorial002_pv1_py39.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "fastapi/_compat/__init__.py",
+          "n_hunks": 2,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/_compat/main.py",
+          "n_hunks": 1,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/_compat/may_v1.py",
+          "n_hunks": 1,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/_compat/model_field.py",
+          "n_hunks": 1,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/_compat/shared.py",
+          "n_hunks": 4,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/_compat/v1.py",
+          "n_hunks": 1,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/_compat/v2.py",
+          "n_hunks": 6,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/datastructures.py",
+          "n_hunks": 3,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/dependencies/utils.py",
+          "n_hunks": 21,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/encoders.py",
+          "n_hunks": 7,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/exceptions.py",
+          "n_hunks": 1,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/openapi/models.py",
+          "n_hunks": 2,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/openapi/utils.py",
+          "n_hunks": 6,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/param_functions.py",
+          "n_hunks": 8,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/params.py",
+          "n_hunks": 9,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/routing.py",
+          "n_hunks": 12,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/temp_pydantic_v1_params.py",
+          "n_hunks": 1,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "fastapi/utils.py",
+          "n_hunks": 4,
+          "functional": true,
+          "nonfunctional": false
+        }
+      ],
+      "test_patch_full": {
+        "test_files": [
+          "tests/test_compat.py",
+          "tests/test_compat_params_v1.py",
+          "tests/test_datetime_custom_encoder.py",
+          "tests/test_filter_pydantic_sub_model/app_pv1.py",
+          "tests/test_filter_pydantic_sub_model/test_filter_pydantic_sub_model_pv1.py",
+          "tests/test_get_model_definitions_formfeed_escape.py",
+          "tests/test_inherited_custom_class.py",
+          "tests/test_jsonable_encoder.py"
+        ],
+        "n_test_files": 8,
+        "imports": [
+          "..utils",
+          ".app_pv1",
+          ".utils",
+          "Annotated",
+          "Any",
+          "BaseModel",
+          "Decimal",
+          "Depends",
+          "Enum",
+          "FastAPI",
+          "FastAPIDeprecationWarning",
+          "FieldInfo",
+          "Optional",
+          "PurePath",
+          "PydanticV1NotSupportedError",
+          "ResponseValidationError",
+          "TestClient",
+          "Undefined",
+          "Union",
+          "_is_model_field",
+          "app",
+          "collections",
+          "dataclass",
+          "dataclasses",
+          "datetime",
+          "decimal",
+          "deque",
+          "enum",
+          "fastapi",
+          "fastapi._compat",
+          "fastapi._compat.shared",
+          "fastapi._compat.v1",
+          "fastapi.encoders",
+          "fastapi.exceptions",
+          "fastapi.temp_pydantic_v1_params",
+          "fastapi.testclient",
+          "field_serializer",
+          "inline_snapshot",
+          "is_bytes_sequence_annotation",
+          "isinf"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi._compat",
+          "fastapi._compat.shared",
+          "fastapi._compat.v1",
+          "fastapi.encoders",
+          "fastapi.exceptions",
+          "fastapi.temp_pydantic_v1_params",
+          "fastapi.testclient",
+          "pydantic",
+          "pydantic.fields",
+          "pydantic.v1"
+        ],
+        "path_refs": []
+      },
+      "estimated_functional_required_for_tests": {
+        "all_functional_files": [
+          "fastapi/_compat/__init__.py",
+          "fastapi/_compat/main.py",
+          "fastapi/_compat/may_v1.py",
+          "fastapi/_compat/model_field.py",
+          "fastapi/_compat/shared.py",
+          "fastapi/_compat/v1.py",
+          "fastapi/_compat/v2.py",
+          "fastapi/datastructures.py",
+          "fastapi/dependencies/utils.py",
+          "fastapi/encoders.py",
+          "fastapi/exceptions.py",
+          "fastapi/openapi/models.py",
+          "fastapi/openapi/utils.py",
+          "fastapi/param_functions.py",
+          "fastapi/params.py",
+          "fastapi/routing.py",
+          "fastapi/temp_pydantic_v1_params.py",
+          "fastapi/utils.py"
+        ],
+        "n_functional": 18,
+        "import_guessed_overlap": [
+          "fastapi/_compat/shared.py",
+          "fastapi/_compat/v1.py",
+          "fastapi/encoders.py",
+          "fastapi/exceptions.py",
+          "fastapi/temp_pydantic_v1_params.py"
+        ],
+        "note": "Verifier runs test_patch pytest only; docs_src/unicode tables in gold PR may be unnecessary if functional modules alone satisfy tests — estimated = functional filter set"
+      }
+    },
+    "rich_3930": {
+      "task_id": "rich_3930",
+      "split": "smoke",
+      "raw": {
+        "topology": "S3_multi_file",
+        "n_files": 26,
+        "n_hunks": 29,
+        "max_delta_L": 306,
+        "files": [
+          "rich/__main__.py",
+          "rich/_cell_widths.py",
+          "rich/_unicode_data/__init__.py",
+          "rich/_unicode_data/_versions.py",
+          "rich/_unicode_data/unicode10-0-0.py",
+          "rich/_unicode_data/unicode11-0-0.py",
+          "rich/_unicode_data/unicode12-0-0.py",
+          "rich/_unicode_data/unicode12-1-0.py",
+          "rich/_unicode_data/unicode13-0-0.py",
+          "rich/_unicode_data/unicode14-0-0.py",
+          "rich/_unicode_data/unicode15-0-0.py",
+          "rich/_unicode_data/unicode15-1-0.py",
+          "rich/_unicode_data/unicode16-0-0.py",
+          "rich/_unicode_data/unicode17-0-0.py",
+          "rich/_unicode_data/unicode4-1-0.py",
+          "rich/_unicode_data/unicode5-0-0.py",
+          "rich/_unicode_data/unicode5-1-0.py",
+          "rich/_unicode_data/unicode5-2-0.py",
+          "rich/_unicode_data/unicode6-0-0.py",
+          "rich/_unicode_data/unicode6-1-0.py",
+          "rich/_unicode_data/unicode6-2-0.py",
+          "rich/_unicode_data/unicode6-3-0.py",
+          "rich/_unicode_data/unicode7-0-0.py",
+          "rich/_unicode_data/unicode8-0-0.py",
+          "rich/_unicode_data/unicode9-0-0.py",
+          "rich/cells.py"
+        ]
+      },
+      "functional": {
+        "topology": "S3_multi_file",
+        "n_files": 4,
+        "n_hunks": 7,
+        "max_delta_L": 306,
+        "files": [
+          "rich/__main__.py",
+          "rich/_unicode_data/__init__.py",
+          "rich/_unicode_data/_versions.py",
+          "rich/cells.py"
+        ]
+      },
+      "n_nonfunc_files": 22,
+      "n_func_files": 4,
+      "bulk_reasons": [
+        "bulk_unicode_or_width_tables"
+      ],
+      "test_patch": {
+        "n_test_files": 3,
+        "test_files": [
+          "tests/test_cells.py",
+          "tests/test_text.py",
+          "tests/test_unicode_data.py"
+        ],
+        "package_imports": [
+          "rich",
+          "rich._unicode_data",
+          "rich.cells"
+        ]
+      },
+      "all_files_annotated": [
+        {
+          "file": "rich/__main__.py",
+          "n_hunks": 1,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "rich/_cell_widths.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/__init__.py",
+          "n_hunks": 1,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "rich/_unicode_data/_versions.py",
+          "n_hunks": 1,
+          "functional": true,
+          "nonfunctional": false
+        },
+        {
+          "file": "rich/_unicode_data/unicode10-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode11-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode12-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode12-1-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode13-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode14-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode15-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode15-1-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode16-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode17-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode4-1-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode5-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode5-1-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode5-2-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode6-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode6-1-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode6-2-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode6-3-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode7-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode8-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/_unicode_data/unicode9-0-0.py",
+          "n_hunks": 1,
+          "functional": false,
+          "nonfunctional": true
+        },
+        {
+          "file": "rich/cells.py",
+          "n_hunks": 4,
+          "functional": true,
+          "nonfunctional": false
+        }
+      ],
+      "test_patch_full": {
+        "test_files": [
+          "tests/test_cells.py",
+          "tests/test_text.py",
+          "tests/test_unicode_data.py"
+        ],
+        "n_test_files": 3,
+        "imports": [
+          "VERSIONS",
+          "__future__",
+          "_is_single_cell_widths",
+          "annotations",
+          "cells",
+          "pytest",
+          "rich",
+          "rich._unicode_data",
+          "rich.cells",
+          "string"
+        ],
+        "package_imports": [
+          "rich",
+          "rich._unicode_data",
+          "rich.cells"
+        ],
+        "path_refs": []
+      },
+      "estimated_functional_required_for_tests": {
+        "all_functional_files": [
+          "rich/__main__.py",
+          "rich/_unicode_data/__init__.py",
+          "rich/_unicode_data/_versions.py",
+          "rich/cells.py"
+        ],
+        "n_functional": 4,
+        "import_guessed_overlap": [
+          "rich/cells.py"
+        ],
+        "note": "Verifier runs test_patch pytest only; docs_src/unicode tables in gold PR may be unnecessary if functional modules alone satisfy tests — estimated = functional filter set"
+      }
+    },
+    "fastapi_14616": {
+      "task_id": "fastapi_14616",
+      "split": "smoke",
+      "raw": {
+        "topology": "S2_single_file_multi_hunk",
+        "n_files": 1,
+        "n_hunks": 2,
+        "max_delta_L": 675,
+        "files": [
+          "fastapi/dependencies/utils.py"
+        ]
+      },
+      "functional": {
+        "topology": "S2_single_file_multi_hunk",
+        "n_files": 1,
+        "n_hunks": 2,
+        "max_delta_L": 675,
+        "files": [
+          "fastapi/dependencies/utils.py"
+        ]
+      },
+      "n_nonfunc_files": 0,
+      "n_func_files": 1,
+      "bulk_reasons": [
+        "mostly_functional"
+      ],
+      "test_patch": {
+        "n_test_files": 1,
+        "test_files": [
+          "tests/test_json_type.py"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.testclient",
+          "pydantic"
+        ]
+      },
+      "all_files_annotated": [
+        {
+          "file": "fastapi/dependencies/utils.py",
+          "n_hunks": 2,
+          "functional": true,
+          "nonfunctional": false
+        }
+      ],
+      "test_patch_full": {
+        "test_files": [
+          "tests/test_json_type.py"
+        ],
+        "n_test_files": 1,
+        "imports": [
+          "Annotated",
+          "Cookie",
+          "Json",
+          "TestClient",
+          "fastapi",
+          "fastapi.testclient",
+          "json",
+          "pydantic",
+          "typing"
+        ],
+        "package_imports": [
+          "fastapi",
+          "fastapi.testclient",
+          "pydantic"
+        ],
+        "path_refs": []
+      },
+      "estimated_functional_required_for_tests": {
+        "all_functional_files": [
+          "fastapi/dependencies/utils.py"
+        ],
+        "n_functional": 1,
+        "import_guessed_overlap": [],
+        "note": "Verifier runs test_patch pytest only; docs_src/unicode tables in gold PR may be unnecessary if functional modules alone satisfy tests — estimated = functional filter set"
+      }
+    }
+  },
+  "fastapi_14616_exact": {
+    "oracle_hunks": [
+      {
+        "file": "fastapi/dependencies/utils.py",
+        "hunk_i": 1,
+        "header": "@@ -51,7 +51,7 @@",
+        "old_start": 51,
+        "new_start": 51,
+        "removed": [
+          "from pydantic import BaseModel"
+        ],
+        "added": [
+          "from pydantic import BaseModel, Json"
+        ]
+      },
+      {
+        "file": "fastapi/dependencies/utils.py",
+        "hunk_i": 2,
+        "header": "@@ -726,11 +726,19 @@ def _validate_value_with_model_field(",
+        "old_start": 726,
+        "new_start": 726,
+        "removed": [
+          "    if is_sequence_field(field) and isinstance(values, (ImmutableMultiDict, Headers)):"
+        ],
+        "added": [
+          "def _is_json_field(field: ModelField) -> bool:",
+          "    return any(type(item) is Json for item in field.field_info.metadata)",
+          "",
+          "",
+          "    if (",
+          "        (not _is_json_field(field))",
+          "        and is_sequence_field(field)",
+          "        and isinstance(values, (ImmutableMultiDict, Headers))",
+          "    ):"
+        ]
+      }
+    ],
+    "n_oracle_hunks": 2,
+    "test_patch": {
+      "test_files": [
+        "tests/test_json_type.py"
+      ],
+      "n_test_files": 1,
+      "imports": [
+        "Annotated",
+        "Cookie",
+        "Json",
+        "TestClient",
+        "fastapi",
+        "fastapi.testclient",
+        "json",
+        "pydantic",
+        "typing"
+      ],
+      "package_imports": [
+        "fastapi",
+        "fastapi.testclient",
+        "pydantic"
+      ],
+      "path_refs": []
+    },
+    "arm_A": {
+      "n_gated": 28,
+      "budget_exceeded": 3,
+      "edits": [
+        {
+          "filepath": "fastapi/dependencies/utils.py",
+          "old_string": "    if is_sequence_field(field):",
+          "new_string": "    print(f\"DEBUG: field.annotation={field.annotation}, type={type(field.annotation)}\")\n    if is_sequence_field(field):",
+          "ok": false,
+          "error": "Failed to replace: old_string not found. Ensure you're not escaping content incorrectly and check whitespace, indentation, and context."
+        }
+      ],
+      "submit": {
+        "patch_size": 778,
+        "files_changed": 1
+      },
+      "n_steps": 36
+    },
+    "arm_B": {
+      "n_gated": 27,
+      "budget_exceeded": 0,
+      "edits": [
+        {
+          "filepath": "tmp/repro.py",
+          "write": true,
+          "content_preview": "\nfrom fastapi import FastAPI, Form, UploadFile\nfrom pydantic import Json\nfrom typing import Annotated, List\nfrom fastapi.testclient import TestClient\n\napp = FastAPI()\n\n@app.post(\"/upload\")\ndef upload(",
+          "ok": true
+        }
+      ],
+      "submit": null,
+      "n_steps": 29
+    },
+    "arm_A_not_found_analysis": {
+      "old_string_preview": "    if is_sequence_field(field):",
+      "new_string_preview": "    print(f\"DEBUG: field.annotation={field.annotation}, type={type(field.annotation)}\")\n    if is_sequence_field(field):",
+      "looks_debug_print": true,
+      "old_string_in_gold_removed": false,
+      "error": "Failed to replace: old_string not found. Ensure you're not escaping content incorrectly and check whitespace, indentation, and context.",
+      "hypothesis": "old_string did not exactly match workspace (wrong context / already drifted / too short unique match); DEBUG print was not the oracle fix"
+    },
+    "oracle_vs_agent_verdict": {
+      "functional_fix_needs": "Change in fastapi/dependencies/utils.py matching both gold hunks; tests/test_json_type.py asserts Json form/cookie behavior",
+      "arm_A_failed_because": "edit_file not_found on utils.py while inserting DEBUG print — never applied either gold hunk; BE×3; WT/submit not a correct fix",
+      "arm_B_failed_because": "only wrote /tmp/repro.py; zero gold edits"
+    }
+  },
+  "hist_docs_tool_waste": {
+    "n_traces_scanned": 45,
+    "n_traces_with_docs_calls": 3,
+    "pct_traces_with_docs_calls": 6.7,
+    "total_docs_tool_calls": 68,
+    "mean_docs_calls_when_any": 22.67,
+    "top_tasks": [
+      {
+        "n_docs_read": 1,
+        "n_docs_grep_or_shell": 58,
+        "n_docs_tool_calls": 59,
+        "n_gated": 59,
+        "task_id": "fastapi_14487"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 6,
+        "n_docs_tool_calls": 6,
+        "n_gated": 57,
+        "task_id": "fastapi_15661"
+      },
+      {
+        "n_docs_read": 2,
+        "n_docs_grep_or_shell": 1,
+        "n_docs_tool_calls": 3,
+        "n_gated": 50,
+        "task_id": "fastapi_14246"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 55,
+        "task_id": "fastapi_13786"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 56,
+        "task_id": "fastapi_14099"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 58,
+        "task_id": "fastapi_14306"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 40,
+        "task_id": "fastapi_14349"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 15,
+        "task_id": "fastapi_14372"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 53,
+        "task_id": "fastapi_14455"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 59,
+        "task_id": "fastapi_14482"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 55,
+        "task_id": "fastapi_14512"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 61,
+        "task_id": "fastapi_14605"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 20,
+        "task_id": "fastapi_14609"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 59,
+        "task_id": "fastapi_14616"
+      },
+      {
+        "n_docs_read": 0,
+        "n_docs_grep_or_shell": 0,
+        "n_docs_tool_calls": 0,
+        "n_gated": 10,
+        "task_id": "fastapi_14786"
+      }
+    ]
+  },
+  "d22_design": {
+    "viable": true,
+    "base": "D21",
+    "add": "Prefer package source over docs/docs_src; `grep -rn --exclude-dir={docs,docs_src,tests,.git} <symbol> <pkg>/`; ignore bulk unicode/width table files unless tests import them",
+    "motivated_by": {
+      "docs_waste_traces": 3,
+      "s3_leave_after_filter": 1,
+      "rich_3930_func_files": 4,
+      "fastapi_14609_func_files": 18
+    },
+    "staged": true
+  },
+  "staged_D22": {
+    "zip_results": "results/p618_clean_frontier/submission_p645_d22_exclude_docs_src_grep.zip",
+    "zip_vault": "proprietary_vault/zips/D22_exclude_docs_src_grep.zip",
+    "agent_dir": "proprietary_vault/agents/D22_exclude_docs_src_grep",
+    "sha256": "f803fe92b86ef8b3a16c849e20469be965f79d2e525a666ac144a522882a0e28",
+    "base": "D7",
+    "g3": "prompt_exclude_docs_src_grep_on_D7",
+    "prompt_bytes": 4261,
+    "clause_bytes": 267,
+    "prompt_sha12": "4191b0e86001",
+    "think": 2048,
+    "motivated_by": "rich_3930 26→4 func; 14609 docs_src noise; 3/45 traces burn 68 docs calls",
+    "appledouble": 0,
+    "check_pass": true,
+    "live_autosubmit": false
+  }
+}

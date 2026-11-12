@@ -1,0 +1,99 @@
+task_id,empty_pass,oracle_pass,error,usable
+fastapi_11194,false,true,,True
+fastapi_11355,false,true,,True
+fastapi_13207,false,true,,True
+fastapi_13537,false,true,,True
+fastapi_13786,false,true,,True
+fastapi_13920,false,true,,True
+fastapi_14077,true,true,empty_unexpected_pass,False
+fastapi_14099,false,true,,True
+fastapi_14186,false,true,,True
+fastapi_14246,false,true,,True
+fastapi_14262,false,true,,True
+fastapi_14266,false,true,,True
+fastapi_14301,false,true,,True
+fastapi_14303,false,true,,True
+fastapi_14306,false,true,,True
+fastapi_14349,false,true,,True
+fastapi_14356,false,false,"oracle_fail:rc=1;114.2s;03_an] ERROR tests/test_tutorial/test_header_param_models/test_tutorial003.py::test_header_param_model_invalid[tutorial003_an_py39] ERROR tests/test_tutorial/test_header_param_models/test_tutorial003.py::test_header_param_model_invalid[tutorial003_an_py310] 12 failed, 29 passed, 12 errors in 1.05s  ",False
+fastapi_14360,false,true,,True
+fastapi_14372,false,true,,True
+fastapi_14419,false,true,,True
+fastapi_14448,false,true,,True
+fastapi_14455,false,true,,True
+fastapi_14458,false,true,,True
+fastapi_14459,false,true,,True
+fastapi_14479,false,true,,True
+fastapi_14482,false,true,,True
+fastapi_14487,false,true,,True
+fastapi_14492,false,true,,True
+fastapi_14512,false,true,,True
+fastapi_14605,false,true,,True
+fastapi_14609,false,true,,True
+fastapi_14616,false,true,,True
+fastapi_14786,false,true,,True
+fastapi_14794,false,true,,True
+fastapi_14873,false,true,,True
+fastapi_14953,false,true,,True
+fastapi_14962,false,true,,True
+fastapi_14986,false,true,,True
+fastapi_15030,false,true,,True
+fastapi_15280,false,true,,True
+fastapi_15589,false,true,,True
+fastapi_15661,false,true,,True
+fastapi_15745,false,false,"oracle_fail:rc=1;53.1s;_included_api_route_without_app_scope_returns_405_response FAILED tests/test_router_include_context.py::test_included_unknown_route_is_ignored_and_can_return_default_404 FAILED tests/test_router_include_context.py::test_apirouter_handle_fallback_without_include_context 3 failed, 33 passed in 1.04s  ",False
+fastapi_15763,false,false,"oracle_fail:rc=1;51.9s;_included_api_route_without_app_scope_returns_405_response FAILED tests/test_router_include_context.py::test_included_unknown_route_is_ignored_and_can_return_default_404 FAILED tests/test_router_include_context.py::test_apirouter_handle_fallback_without_include_context 3 failed, 31 passed in 1.01s  ",False
+fastapi_15785,false,false,"oracle_fail:rc=1;52.1s;_included_api_route_without_app_scope_returns_405_response FAILED tests/test_router_include_context.py::test_included_unknown_route_is_ignored_and_can_return_default_404 FAILED tests/test_router_include_context.py::test_apirouter_handle_fallback_without_include_context 3 failed, 35 passed in 0.98s  ",False
+fastapi_15800,false,true,,True
+fastapi_5624,false,true,,True
+fastapi_9425,false,true,,True
+fastapi_9555,false,true,,True
+fastapi_9753,false,true,,True
+httpx_3672,false,true,,True
+requests_6589,false,false,"oracle_fail:rc=1;54.9s;est_requests.py:2724: Failed: DID NOT RAISE InvalidURL =========================== short test summary info ============================ FAILED tests/test_requests.py::TestPreparingURLs::test_redirecting_to_bad_url[http://localhost:-1-InvalidURL] 1 failed, 321 passed, 1 skipped, 1 xfailed in 31.42s  ",False
+requests_6592,false,false,"oracle_fail:rc=1;56.3s;est_requests.py:2707: Failed: DID NOT RAISE InvalidURL =========================== short test summary info ============================ FAILED tests/test_requests.py::TestPreparingURLs::test_redirecting_to_bad_url[http://localhost:-1-InvalidURL] 1 failed, 319 passed, 1 skipped, 1 xfailed in 31.38s  ",False
+requests_6629,false,false,"oracle_fail:rc=1;54.9s;est_requests.py:2707: Failed: DID NOT RAISE InvalidURL =========================== short test summary info ============================ FAILED tests/test_requests.py::TestPreparingURLs::test_redirecting_to_bad_url[http://localhost:-1-InvalidURL] 1 failed, 320 passed, 1 skipped, 1 xfailed in 31.43s  ",False
+requests_6644,false,true,,True
+requests_6757,false,false,"oracle_fail:rc=1;71.7s;======= FAILED tests/test_requests.py::TestPreparingURLs::test_different_connection_pool_for_tls_settings_verify_bundle_unexpired_cert FAILED tests/test_requests.py::TestPreparingURLs::test_different_connection_pool_for_mtls_settings 2 failed, 325 passed, 1 skipped, 1 xfailed, 4 warnings in 33.35s  ",False
+requests_7205,false,true,,True
+requests_7315,false,true,,True
+requests_7427,false,true,,True
+requests_7505,false,true,,True
+rich_2725,false,true,,True
+rich_2943,false,true,,True
+rich_3006,false,true,,True
+rich_3052,false,true,,True
+rich_3061,false,true,,True
+rich_3064,false,false,"oracle_fail:rc=1;22.8s;line \x1b[...           \n' =========================== short test summary info ============================ FAILED tests/test_markdown.py::test_markdown_render - AssertionError: assert ... FAILED tests/test_markdown.py::test_inline_code - AssertionError: assert 'inl... 2 failed, 2 passed in 0.08s  ",False
+rich_3067,false,true,,True
+rich_3105,false,true,,True
+rich_3130,false,false,"oracle_fail:rc=1;24.0s;line \x1b[...           \n' =========================== short test summary info ============================ FAILED tests/test_markdown.py::test_markdown_render - AssertionError: assert ... FAILED tests/test_markdown.py::test_inline_code - AssertionError: assert 'inl... 2 failed, 4 passed in 0.09s  ",False
+rich_3180,false,true,,True
+rich_3296,false,false,"oracle_fail:rc=1;34.5s;_indent_guides - assert... FAILED tests/test_syntax.py::test_python_render_indent_guides - AssertionErro... FAILED tests/test_syntax.py::test_option_no_wrap - AssertionError: assert '\x... FAILED tests/test_syntax.py::test_syntax_highlight_ranges - AssertionError: a... 8 failed, 16 passed in 0.38s  ",False
+rich_3468,false,true,,True
+rich_3469,false,false,"oracle_fail:rc=1;31.2s;est_markdown.py:116: AssertionError: assert 'inline \x1b[...           \n' == 'inline \x1b[...           \n' =========================== short test summary info ============================ FAILED tests/test_markdown.py::test_inline_code - AssertionError: assert 'inl... 1 failed, 6 passed in 0.09s  ",False
+rich_3470,false,true,,True
+rich_3472,false,false,"oracle_fail:rc=1;30.5s;ests/test_pretty.py:672: assert 'Foo(\n    ba... \'bar\'"")\n)' == 'Foo(bar=Attr...te \'bar\'""))' =========================== short test summary info ============================ FAILED tests/test_pretty.py::test_attrs_broken_310 - assert 'Foo(\n    ba... ... 1 failed, 50 passed, 1 skipped in 0.11s  ",False
+rich_3480,false,true,,True
+rich_3486,false,true,,True
+rich_3518,false,true,,True
+rich_3521,false,true,,True
+rich_3535,false,true,,True
+rich_3675,false,true,,True
+rich_3676,false,true,,True
+rich_3772,false,true,,True
+rich_3782,false,false,"oracle_fail:rc=1;35.2s;ple_passing_lexer_instance FAILED tests/test_syntax.py::test_python_render_indent_guides - AssertionErro... FAILED tests/test_syntax.py::test_option_no_wrap - AssertionError: assert '\x... FAILED tests/test_syntax.py::test_syntax_highlight_ranges - AssertionError: a... 6 failed, 19 passed in 0.44s  ",False
+rich_3882,false,true,,True
+rich_3894,false,true,,True
+rich_3905,false,true,,True
+rich_3930,false,true,,True
+rich_3934,false,true,,True
+rich_3938,false,true,,True
+rich_3942,false,true,,True
+rich_3944,false,true,,True
+rich_4006,,true,empty:timeout_420s,False
+rich_4070,false,false,"oracle_fail:rc=1;28.4s;le_passing_lexer_instance FAILED tests/test_syntax.py::test_python_render_indent_guides - AssertionErro... FAILED tests/test_syntax.py::test_option_no_wrap - AssertionError: assert '\x... FAILED tests/test_syntax.py::test_syntax_highlight_ranges - AssertionError: a... 6 failed, 118 passed in 0.87s  ",False
+rich_4075,false,true,,True
+rich_4076,false,true,,True
+rich_4077,false,true,,True
+rich_4079,false,false,"oracle_fail:rc=1;27.2s;est_markdown.py:215: AssertionError: assert '\n\x1b[36m  ...    \x1b[0m\n' == '\n\x1b[36m  ...    \x1b[0m\n' =========================== short test summary info ============================ FAILED tests/test_markdown.py::test_inline_code_in_table_cells - AssertionErr... 1 failed, 7 passed in 0.10s  ",False

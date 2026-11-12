@@ -1,0 +1,54 @@
+{
+  "suite": "swe-horizon-bench-kbench",
+  "backend": "offline_shim",
+  "n_tasks": 3,
+  "all_passed": true,
+  "leaderboard": [
+    {
+      "task": "swe_horizon_b1_vs_ast_localization",
+      "passed": true,
+      "score": 0.95,
+      "n": 60,
+      "backend": "offline_shim",
+      "details": {
+        "mean_b1_cover": 0.5583333333333333,
+        "mean_ast_k3_cover": 0.95,
+        "frac_ast_ge_b1": 1.0,
+        "model": "deterministic_ast_horizon"
+      },
+      "error": null
+    },
+    {
+      "task": "swe_horizon_w2_inline_repro_guard",
+      "passed": true,
+      "score": 1.0,
+      "n": 60,
+      "backend": "offline_shim",
+      "details": {
+        "n_need_inline": 52,
+        "inline_pass_rate_on_need": 1.0,
+        "model": "deterministic_inline_repro_policy"
+      },
+      "error": null
+    },
+    {
+      "task": "swe_horizon_punica_budget_feasibility",
+      "passed": true,
+      "score": 1.0,
+      "n": 60,
+      "backend": "offline_shim",
+      "details": {
+        "frac_ms_dominates_verbose": 1.0,
+        "frac_under_12h": 1.0,
+        "mean_ms_wall_h_lora_11p01": 7.798970632758099,
+        "mean_verbose_wall_h_lora": 17.438692098092645,
+        "base_tok_s": 20.09,
+        "lora_tok_s": 11.01,
+        "model": "deterministic_ms_sft_policy"
+      },
+      "error": null
+    }
+  ],
+  "ood_n": 60,
+  "target": "https://www.kaggle.com/benchmarks"
+}

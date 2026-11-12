@@ -1,0 +1,47 @@
+{
+  "ticket": "P6.26",
+  "table_1b": [
+    {
+      "intervention": "pin_deps_starlette_band_docker_p11",
+      "scope": "129_census",
+      "after": {
+        "usable": 111,
+        "unusable": 18
+      },
+      "probe_recovered": [
+        "fastapi_11194"
+      ],
+      "sources": [
+        "gemma4-agent/docs/harness_verify.md",
+        "gemma4-agent/results/soundness.csv"
+      ]
+    },
+    {
+      "intervention": "PYTHONPATH_src_starlette_0.46.2_quarantine_recheck",
+      "scope": "9_of_18_quarantine",
+      "flipped_to_unlock": 5,
+      "stayed": 4,
+      "unlocked_ids": [
+        "fastapi_14356",
+        "fastapi_15763",
+        "requests_6589",
+        "requests_6592",
+        "requests_6629"
+      ],
+      "quarantine_before": 18,
+      "quarantine_after": 13,
+      "sources": [
+        "gemma4-agent/results/p51a_r8_p314a/quarantine_gold_unlock_targeted.json",
+        "gemma4-agent/configs/splits.json"
+      ]
+    },
+    {
+      "intervention": "same_pins_bon_gold_reverify",
+      "scope": "rollouts",
+      "requests_7205_pass": "9/16",
+      "requests_7505_pass": "8/14",
+      "already_oracle_srcpath_pre": 0,
+      "source": "gemma4-agent/results/p51a_r8_p314a/reverify_srcpath_manifest.json"
+    }
+  ]
+}

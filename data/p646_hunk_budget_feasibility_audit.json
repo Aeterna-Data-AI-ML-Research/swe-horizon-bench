@@ -1,0 +1,782 @@
+{
+  "ticket": "P6.46-hunk-budget-ceiling-and-consolidate-d9-d22-zoo",
+  "written_utc": "2026-10-30T09:43:19Z",
+  "g4_holdout_excluded": true,
+  "holdout_leaks": [],
+  "call_cap": 28,
+  "localize_budget_assumed": 8,
+  "tier_definition": {
+    "F1": "1–3 functional hunks",
+    "F2": "4–8 functional hunks",
+    "F3": "≥9 functional hunks (sequential edit_file near-impossible under 28 after localize)"
+  },
+  "census_n85": {
+    "n": 85,
+    "tier_counts": {
+      "F1_1to3": 54,
+      "F3_ge9": 13,
+      "F2_4to8": 16,
+      "F0_empty": 2
+    },
+    "tier_shares_pct": {
+      "F1_1to3": 63.5,
+      "F3_ge9": 15.3,
+      "F2_4to8": 18.8,
+      "F0_empty": 2.4
+    },
+    "median_functional_hunks": 2,
+    "p90_functional_hunks": 12,
+    "max_functional_hunks": 90,
+    "max_task": "fastapi_14609"
+  },
+  "repeat_replacement": {
+    "n_f2_plus_f3": 29,
+    "n_f2_plus_f3_allow_multiple_or_batch_reduces": 15,
+    "pct_f2_plus_f3_reducible": 51.7,
+    "n_any_allow_multiple_helpful": 12,
+    "n_any_batch_helpful": 15
+  },
+  "hist_smoke_dev_pass_by_tier": {
+    "F1_1to3": {
+      "n": 27,
+      "n_pass": 7,
+      "pass_pct": 25.9,
+      "n_census_smoke_dev": 27,
+      "n_census_all": 54
+    },
+    "F2_4to8": {
+      "n": 8,
+      "n_pass": 0,
+      "pass_pct": 0.0,
+      "n_census_smoke_dev": 8,
+      "n_census_all": 16
+    },
+    "F3_ge9": {
+      "n": 9,
+      "n_pass": 0,
+      "pass_pct": 0.0,
+      "n_census_smoke_dev": 9,
+      "n_census_all": 13
+    }
+  },
+  "p624b_arm_A_pass_by_tier": {
+    "F1_1to3": {
+      "n": 3,
+      "n_pass": 2,
+      "pass_pct": 66.7
+    },
+    "F2_4to8": {
+      "n": 1,
+      "n_pass": 0,
+      "pass_pct": 0.0
+    },
+    "F3_ge9": {
+      "n": 1,
+      "n_pass": 0,
+      "pass_pct": 0.0
+    }
+  },
+  "exemplars": {
+    "F3": [
+      {
+        "task_id": "fastapi_14609",
+        "n_functional_hunks": 90,
+        "n_functional_files": 18,
+        "allow_multiple_helpful": true
+      },
+      {
+        "task_id": "fastapi_14186",
+        "n_functional_hunks": 51,
+        "n_functional_files": 10,
+        "allow_multiple_helpful": true
+      },
+      {
+        "task_id": "fastapi_14262",
+        "n_functional_hunks": 26,
+        "n_functional_files": 7,
+        "allow_multiple_helpful": true
+      },
+      {
+        "task_id": "fastapi_14605",
+        "n_functional_hunks": 20,
+        "n_functional_files": 7,
+        "allow_multiple_helpful": true
+      },
+      {
+        "task_id": "httpx_3672",
+        "n_functional_hunks": 18,
+        "n_functional_files": 7,
+        "allow_multiple_helpful": true
+      },
+      {
+        "task_id": "fastapi_13786",
+        "n_functional_hunks": 18,
+        "n_functional_files": 4,
+        "allow_multiple_helpful": true
+      },
+      {
+        "task_id": "fastapi_15800",
+        "n_functional_hunks": 14,
+        "n_functional_files": 2,
+        "allow_multiple_helpful": false
+      },
+      {
+        "task_id": "rich_3061",
+        "n_functional_hunks": 13,
+        "n_functional_files": 1,
+        "allow_multiple_helpful": true
+      },
+      {
+        "task_id": "fastapi_15030",
+        "n_functional_hunks": 12,
+        "n_functional_files": 4,
+        "allow_multiple_helpful": false
+      },
+      {
+        "task_id": "fastapi_14306",
+        "n_functional_hunks": 12,
+        "n_functional_files": 2,
+        "allow_multiple_helpful": false
+      }
+    ],
+    "F2": [
+      {
+        "task_id": "fastapi_14459",
+        "n_functional_hunks": 8,
+        "allow_multiple_helpful": false
+      },
+      {
+        "task_id": "rich_3676",
+        "n_functional_hunks": 8,
+        "allow_multiple_helpful": true
+      },
+      {
+        "task_id": "fastapi_14419",
+        "n_functional_hunks": 7,
+        "allow_multiple_helpful": false
+      },
+      {
+        "task_id": "rich_3942",
+        "n_functional_hunks": 7,
+        "allow_multiple_helpful": false
+      },
+      {
+        "task_id": "rich_3930",
+        "n_functional_hunks": 7,
+        "allow_multiple_helpful": false
+      },
+      {
+        "task_id": "requests_7505",
+        "n_functional_hunks": 6,
+        "allow_multiple_helpful": false
+      },
+      {
+        "task_id": "rich_3772",
+        "n_functional_hunks": 6,
+        "allow_multiple_helpful": false
+      },
+      {
+        "task_id": "fastapi_14962",
+        "n_functional_hunks": 5,
+        "allow_multiple_helpful": false
+      }
+    ]
+  },
+  "rows_compact": [
+    {
+      "task_id": "fastapi_15661",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_15589",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_15030",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 12,
+      "n_functional_files": 4,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_14962",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 5,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_15280",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14986",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 4,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "requests_7505",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 6,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "requests_7427",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "requests_7315",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "requests_7205",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_4077",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_4076",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_4075",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 4,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14873",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_13920",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14794",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14786",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14492",
+      "tier": "F0_empty",
+      "n_functional_hunks": 0,
+      "n_functional_files": 0,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14479",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14099",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 11,
+      "n_functional_files": 3,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_14609",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 90,
+      "n_functional_files": 18,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_14372",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 3,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14349",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14512",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 3,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14487",
+      "tier": "F0_empty",
+      "n_functional_hunks": 0,
+      "n_functional_files": 0,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_11355",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 3,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_14482",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 5,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14306",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 12,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_14458",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 4,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_14459",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 8,
+      "n_functional_files": 3,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14448",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 3,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14455",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_9753",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_9555",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_13207",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14360",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14356",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_5624",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14419",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 7,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14301",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14262",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 26,
+      "n_functional_files": 7,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_14266",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14246",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14186",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 51,
+      "n_functional_files": 10,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_9425",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3934",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 3,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3944",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3942",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 7,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3938",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3882",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3894",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3905",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3930",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 7,
+      "n_functional_files": 4,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "httpx_3672",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 18,
+      "n_functional_files": 7,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_15800",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 14,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_14605",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 20,
+      "n_functional_files": 7,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_15763",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14303",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_13537",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_14953",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 4,
+      "n_functional_files": 3,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_13786",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 18,
+      "n_functional_files": 4,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "fastapi_14616",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "fastapi_11194",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "requests_6629",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "requests_6644",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "requests_6589",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "requests_6592",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3180",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 4,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3486",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 12,
+      "n_functional_files": 3,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "rich_3468",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 4,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3772",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 6,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3675",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 5,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3676",
+      "tier": "F2_4to8",
+      "n_functional_hunks": 8,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "rich_3518",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3535",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 2,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3521",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3480",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 2,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "rich_3470",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3052",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 12,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": true
+    },
+    {
+      "task_id": "rich_2943",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_2725",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3105",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3067",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3006",
+      "tier": "F1_1to3",
+      "n_functional_hunks": 1,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": false
+    },
+    {
+      "task_id": "rich_3061",
+      "tier": "F3_ge9",
+      "n_functional_hunks": 13,
+      "n_functional_files": 1,
+      "allow_multiple_or_batch_reduces": true
+    }
+  ]
+}
