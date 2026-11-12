@@ -290,9 +290,12 @@ pre code {
 
 .hero-art ascii-art {
   display: block;
-  width: min(100%, 320px);
-  color: var(--phosphor);
-  font-size: 11px;
+  width: min(100%, 340px);
+  color: #5dff9a;
+  font-size: 12px;
+  line-height: 1.15;
+  text-shadow: 0 0 8px rgba(57, 255, 136, 0.45);
+  filter: contrast(1.15) brightness(1.08);
 }
 
 /* sections */
