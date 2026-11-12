@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -10,8 +10,12 @@ readme = "README.md"
 license = { text = "Apache-2.0" }
 requires-python = ">=3.10"
 authors = [{ name = "SWE-HorizonBench contributors" }]
-keywords = ["swe-bench", "localization", "ast", "coding-agents"]
+keywords = ["swe-bench", "localization", "ast", "coding-agents", "kbench"]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench"
+Repository = "https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench"
 
 [project.optional-dependencies]
 dev = ["pytest>=7.0"]
@@ -21,6 +25,12 @@ swe-horizon-bench = "swe_horizon_bench.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+swe_horizon_bench = ["py.typed"]
+
+[tool.setuptools]
+include-package-data = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
