@@ -341,11 +341,11 @@ print(winners["t1"]["j_ms"], score)</code></pre>
                 <button class="copy-btn" type="button" data-copy="code-kb-cli">Copy</button>
               </div>
               <pre><code id="code-kb-cli">python3 -m swe_horizon_bench.cli kbench-suite \
-  --dataset data/swe_horizon_bench_ood_60.jsonl \
+  --dataset data/s6_ood_probe_targets.jsonl \
   --out data/swe_horizon_bench_kbench_leaderboard.json
 
 python3 -m swe_horizon_bench.cli evaluate-ood \
-  --dataset data/swe_horizon_bench_ood_60.jsonl</code></pre>
+  --dataset data/s6_ood_probe_targets.jsonl</code></pre>
             </div>
             <div class="code-block">
               <div class="bar">
@@ -358,7 +358,7 @@ python3 -m swe_horizon_bench.cli evaluate-ood \
     TASK_NAMES,
 )
 
-df = load_ood_dataframe("data/swe_horizon_bench_ood_60.jsonl")
+df = load_ood_dataframe("data/s6_ood_probe_targets.jsonl")
 board = run_kbench_suite(df=df)
 print(TASK_NAMES)
 print(board)</code></pre>
