@@ -35,6 +35,12 @@
           <a href="#use">Usage</a>
           <a href="#ood">OOD</a>
           <a href="#cite">Cite</a>
+          <a
+            href="https://www.kaggle.com/competitions/gemma-4-developer-agent-paper"
+            target="_blank"
+            rel="noopener"
+            >Competition</a
+          >
           <a class="nav-cta" href="https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench">GitHub</a>
         </nav>
       </header>
@@ -57,8 +63,38 @@
           select serve-cost-aware trajectories with <strong>MS-SFT</strong>, and probe
           construct validity on <strong>SWE-HorizonBench-OOD</strong>.
         </p>
+
+        <aside class="paper-callout" aria-label="Paper affiliation">
+          <p>
+            <strong
+              >This toolkit is part of the article
+              <em>From Local Validation to Live Evaluation</em></strong
+            >
+            — the open reproducibility suite for the
+            <a
+              href="https://www.kaggle.com/competitions/gemma-4-developer-agent-paper"
+              target="_blank"
+              rel="noopener"
+              ><strong>Gemma 4 Developer Agent Paper Track</strong></a
+            >
+            competition. Click below to read the full unabridged paper in-page.
+          </p>
+          <div class="cta-row paper-actions">
+            <button class="btn" type="button" data-open-article>
+              Read the full article
+            </button>
+            <a
+              class="btn ghost"
+              href="https://www.kaggle.com/competitions/gemma-4-developer-agent-paper"
+              target="_blank"
+              rel="noopener"
+              >Open competition</a
+            >
+          </div>
+        </aside>
+
         <div class="cta-row">
-          <a class="btn" href="#install">Install</a>
+          <a class="btn ghost" href="#install">Install</a>
           <a class="btn ghost" href="#use">Usage</a>
           <a class="btn ghost" href="https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench">Source</a>
         </div>
@@ -379,11 +415,28 @@ print(board)</code></pre>
         <div class="panel">
           <h3>From Local Validation to Live Evaluation</h3>
           <p>
+            <strong>This toolkit ships with the paper</strong> for the
+            <a
+              href="https://www.kaggle.com/competitions/gemma-4-developer-agent-paper"
+              target="_blank"
+              rel="noopener"
+              >Gemma 4 Developer Agent Paper Track</a
+            >.
             How Broken Tests, LoRA Serving Overhead, and Context Limits Bottleneck
             4-Bit Coding Agents — Moran Zavdi (team). Dataset
             <a href="https://www.kaggle.com/datasets/moranzavdi/gemma4-soundness-and-punica-bench"
               >moranzavdi/gemma4-soundness-and-punica-bench</a>.
           </p>
+          <div class="cta-row" style="margin-top: 0.9rem">
+            <button class="btn" type="button" data-open-article>Read the full article</button>
+            <a
+              class="btn ghost"
+              href="./paper_unabridged_full.md"
+              target="_blank"
+              rel="noopener"
+              >Raw Markdown</a
+            >
+          </div>
           <div class="code-block">
             <div class="bar">
               <span>BibTeX</span>
@@ -408,11 +461,50 @@ print(board)</code></pre>
         </div>
         <div class="credit">
           Wordmark via <a href="https://ascii.rest/" rel="noopener">ascii.rest</a> ·
-          <a href="https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench">GitHub</a>
+          <a href="https://github.com/Aeterna-Data-AI-ML-Research/swe-horizon-bench">GitHub</a> ·
+          <a
+            href="https://www.kaggle.com/competitions/gemma-4-developer-agent-paper"
+            target="_blank"
+            rel="noopener"
+            >Competition</a
+          >
         </div>
       </footer>
     </div>
 
+    <div
+      class="modal"
+      id="article-modal"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="article-modal-title"
+    >
+      <div class="modal-backdrop" data-close-article></div>
+      <div class="modal-panel" role="document">
+        <header class="modal-head">
+          <div>
+            <p class="modal-kicker">Full unabridged article</p>
+            <h2 id="article-modal-title">From Local Validation to Live Evaluation</h2>
+          </div>
+          <div class="modal-actions">
+            <a
+              class="btn ghost"
+              href="https://www.kaggle.com/competitions/gemma-4-developer-agent-paper"
+              target="_blank"
+              rel="noopener"
+              >Competition</a
+            >
+            <button class="btn ghost" type="button" data-close-article>Close</button>
+          </div>
+        </header>
+        <div class="modal-body article-content" id="article-content">
+          <p class="article-loading">Loading article…</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/lib/marked.umd.js" defer></script>
     <script src="./site.js" defer></script>
   </body>
 </html>

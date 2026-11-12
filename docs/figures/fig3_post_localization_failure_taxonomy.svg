@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="350" viewBox="0 0 680 350">
+  <rect width="680" height="350" fill="#ffffff"/>
+  <text x="28" y="26" font-size="14" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#0f172a">Figure 3. Localization → edit → verification → resolution funnel &amp; first-shot edit dominance</text>
+  <text x="28" y="44" font-size="11" font-family="Helvetica,Arial,sans-serif" fill="#64748b">Historical smoke+dev N=44 (bars) + timing core N=5 (dots) · 138 post-edit pytest episodes · holdout excluded</text>
+
+  <!-- Horizontal conversion funnel (left panel) -->
+  <text x="28" y="68" font-size="12" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#0f172a">A. Episode conversion funnel (N=44)</text>
+
+  <!-- Stage 1 -->
+  <text x="28" y="95" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#0f172a">1. Read gold file</text>
+  <rect x="160" y="81" width="235" height="20" rx="3" fill="#2563eb"/>
+  <text x="402" y="95" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#1e3a8a">84.1% (37/44)</text>
+  <text x="28" y="114" font-size="10" font-family="Helvetica,Arial,sans-serif" fill="#92400e">↳ −43.2 pp drop: 19/30 read gold but never edit it (10 explore/think burn, 5 scratch, 4 tests/callers)</text>
+
+  <!-- Stage 2 -->
+  <text x="28" y="138" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#0f172a">2. Edit gold file</text>
+  <rect x="160" y="124" width="115" height="20" rx="3" fill="#2563eb"/>
+  <text x="282" y="138" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#1e3a8a">40.9% (18/44)</text>
+  <text x="28" y="157" font-size="10" font-family="Helvetica,Arial,sans-serif" fill="#991b1b">↳ −22.7 pp drop: 10/11 failed gold edits never run pytest after editing; 6/11 miss companion hunk</text>
+
+  <!-- Stage 3 -->
+  <text x="28" y="181" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#0f172a">3. Post-edit pytest</text>
+  <rect x="160" y="167" width="51" height="20" rx="3" fill="#0d9488"/>
+  <text x="218" y="181" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#115e59">18.2% (8/44)</text>
+  <text x="28" y="200" font-size="10" font-family="Helvetica,Arial,sans-serif" fill="#475569">↳ −2.3 pp drop: 7/8 episodes that verify with pytest after a gold edit resolve the task</text>
+
+  <!-- Stage 4 -->
+  <text x="28" y="224" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#0f172a">4. Resolved (Pass@1)</text>
+  <rect x="160" y="210" width="45" height="20" rx="3" fill="#16a34a"/>
+  <text x="212" y="224" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#166534">15.9% (7/44)</text>
+  <text x="310" y="224" font-size="10" font-family="Helvetica,Arial,sans-serif" fill="#64748b">(Timing core N=5: 100% → 80% → 20% → 40%)</text>
+
+  <!-- Bottom panel: First-shot edit dominance -->
+  <line x1="24" y1="242" x2="656" y2="242" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="28" y="262" font-size="12" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#0f172a">B. First-shot edit dominance across 138 post-edit pytest episodes</text>
+
+  <rect x="28" y="274" width="195" height="60" rx="6" fill="#ecfdf5" stroke="#16a34a"/>
+  <text x="40" y="293" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#166534">First edit passes pytest</text>
+  <text x="40" y="311" font-size="13" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#0f172a">43 / 138 (31.2%)</text>
+  <text x="40" y="326" font-size="9" font-family="Helvetica,Arial,sans-serif" fill="#334155">Edit all companions pre-pytest: 75.2%</text>
+
+  <rect x="238" y="274" width="205" height="60" rx="6" fill="#fef2f2" stroke="#b91c1c"/>
+  <text x="250" y="293" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#991b1b">First edit fails → 2nd edit+pytest</text>
+  <text x="250" y="311" font-size="13" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#991b1b">0 / 10 (0%) convert to PASS</text>
+  <text x="250" y="326" font-size="9" font-family="Helvetica,Arial,sans-serif" fill="#334155">52 first-edit fails; 42 never re-test</text>
+
+  <rect x="458" y="274" width="198" height="60" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="470" y="293" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#1e3a8a">Same-task PASS vs FAIL (n=27)</text>
+  <text x="470" y="311" font-size="11" font-weight="700" font-family="Helvetica,Arial,sans-serif" fill="#0f172a">1st edit at call 10 vs call 13</text>
+  <text x="470" y="326" font-size="9" font-family="Helvetica,Arial,sans-serif" fill="#334155">All companions pre-pytest: 75% vs 57%</text>
+</svg>
