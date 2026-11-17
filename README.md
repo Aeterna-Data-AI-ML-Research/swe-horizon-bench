@@ -1,5 +1,7 @@
 # SWE-HorizonBench
+Following Final Article at: https://medium.com/meetcyber/when-better-agent-behavior-does-not-improve-accuracy-94b673a05bc3
 
+       
 **Official companion toolkit** for the paper:
 
 > **From Local Validation to Live Evaluation**  
